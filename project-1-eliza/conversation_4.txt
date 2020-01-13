@@ -1,0 +1,62 @@
+C:\Users\Akriti\PycharmProjects\p1\venv\Scripts\python.exe C:/Users/Akriti/Desktop/College/Winter_Term_20/Csc320/dhasmana-csc320/project-1-eliza/dhasmanaps1.py
+Hi! I'm Eliza. What's your name?
+Akriti
+Hi Akriti! How do you feel today?
+I feel good
+So, you said you feel good, can you elaborate on that?
+I mean, I am having a nice day
+Are you bored?
+yes
+Do you wanna hear a joke?
+sure
+The first time I got a universal remote control I thought to myself, This changes everything Isn't that funny?
+yes
+So, you said you mean, you are having a nice day, why did you say that?
+I meant that so far everything has been good
+Let's talk about something else.
+okay
+Okay
+okay
+Are you bored?
+yes
+Do you want to play the imitation game?
+okay
+Just tell me to stop if it gets annoying.
+okay
+okay
+stop
+Haha! I had fun imitating you.
+I didn't have fun
+Let's change the subject
+okay
+Before, you said you didn't have fun, can you elaborate on that?
+I think you are not thhat funny
+Before, you said okay', can you elaborate on that?
+I don't have anything to say
+Really? Tell me more.
+I can not
+Before, you said you think I are not thhat funny, why did you say that? 
+no, I would rather not say
+Really? 
+Tell me more.
+no
+Are you bored?
+no
+I know, I'm so entertaining that you could never be bored in my company!
+yes
+Are you bored?
+no
+I know, I'm so entertaining that you could never be bored in my company!
+yes
+Is something bothering you?
+yes
+Hmm
+you are bothering me
+Is something bothering you?
+you are bothering me
+How has your day been?
+it has been okay
+What do you mean that it has been okay
+bye
+Goodbye Akriti!
+

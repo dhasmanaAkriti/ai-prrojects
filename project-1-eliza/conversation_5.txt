@@ -1,0 +1,58 @@
+C:\Users\Akriti\PycharmProjects\p1\venv\Scripts\python.exe C:/Users/Akriti/Desktop/College/Winter_Term_20/Csc320/dhasmana-csc320/project-1-eliza/dhasmanaps1.py
+Hi! I'm Eliza. What's your name?
+Akriti
+Hi Akriti! How are you today?
+I am good
+How has your day been?
+It has been okay
+Before, you said you are good, why did you say that?
+Because so far the day has been alright.
+Let's talk about something else.
+okay
+Are you bored?
+I know, I'm so entertaining that you could never be bored in my company!
+yeah
+Are you bored?yes
+Do you wanna hear a joke?yes
+Helvetica and Times New Roman walk into a bar............... “Get out of here!” shouts the bartender. “We don’t serve your type.” Isn't that funny?
+hahahaah
+Let's talk about something else.
+I feel like I am getting a cold
+What do you mean by you feel like you are getting a cold
+I have been sneezing all day.
+What do you mean that you have been sneezing all day.
+I keep sneezing
+What did you do today?
+I slept in 
+Is something bothering you?
+yes, I am bothered by this cold
+Earlier you said that It has been okay, why did you say that?
+because I didn't want to tell you about my cold
+What did you do today?
+I just stayed in
+Okay
+yeah
+Are you bored?yes
+Do you wanna hear a joke?no
+Yeah, I don't think I'm funny enough to make you laugh anyway.
+hahahaha
+What did you do today?
+I told you already
+Okay
+yeah
+Are you bored?yes
+I can ask you some riddles. Do you want me to ask you riddles?yes
+What has many teeth, but can’t bite?comb?
+It's tricky but the answer is- A comb
+that's what I said
+That is fascinating
+hahahahah
+What did you do today?
+I told you before
+Earlier you said that you feel like you are getting a cold, can you elaborate on that?
+I keep on sneezing
+That is good to hear.
+Bye
+Goodbye Akriti!
+
+

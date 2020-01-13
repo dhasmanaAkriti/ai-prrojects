@@ -1,0 +1,111 @@
+Hi! I'm Eliza. What's your name?
+Akriti
+Hi Akriti! How do you feel today?
+I feel good
+Do you want to play TicTacToe with me?
+Yes
+You are X.
+ | | 
+-+-+-
+ | | 
+-+-+-
+ | | 
+Turn 1: Player X, please enter your move:
+  Enter a row (1-3): 1
+  Enter a col (1-3): 1
+X| | 
+-+-+-
+ | | 
+-+-+-
+ | | 
+Hmmm... It's my turn, let me think!
+X| | 
+-+-+-
+O| | 
+-+-+-
+ | | 
+Turn 3: Player X, please enter your move:
+  Enter a row (1-3): 1
+  Enter a col (1-3): 3
+X| |X
+-+-+-
+O| | 
+-+-+-
+ | | 
+Hmmm... It's my turn, let me think!
+X| |X
+-+-+-
+O|O| 
+-+-+-
+ | | 
+Turn 5: Player X, please enter your move:
+  Enter a row (1-3): 3
+  Enter a col (1-3): 1
+X| |X
+-+-+-
+O|O| 
+-+-+-
+X| | 
+Hmmm... It's my turn, let me think!
+X|O|X
+-+-+-
+O|O| 
+-+-+-
+X| | 
+Turn 7: Player X, please enter your move:
+  Enter a row (1-3): 3
+  Enter a col (1-3): 3
+X|O|X
+-+-+-
+O|O| 
+-+-+-
+X| |X
+Hmmm... It's my turn, let me think!
+X|O|X
+-+-+-
+O|O| 
+-+-+-
+X|O|X
+I won! Better luck next time!
+That was a good game!
+Yes 
+What do you mean by Yes
+it was a good game
+What do you mean by it was a good game
+I had fun playing with you
+So, you said Yes, can you elaborate on that? 
+I like playing with you
+Do you want to play TicTacToe with me?
+No, I think once was enough.
+Good, that you backed out. I believe that we're all equal. Games just create animosity. 
+That is very true.
+Do you want to play the imitation game?
+sure
+Just tell me to stop if it gets annoying.
+sure
+okay
+okay
+what are you doing
+what are you doing
+okay I get it
+okay I get it 
+wow, you are persistent
+wow, you are persistent 
+I am stupid
+I am stupid
+this is so stupid
+this is so stupid
+you are stupid
+you are stupid
+enough of this already
+enough of this already
+stop
+stop
+I mean it
+I mean it
+stop
+stop
+stop
+stop
+bye
+bye

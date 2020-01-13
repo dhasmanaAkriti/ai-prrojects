@@ -1,0 +1,116 @@
+C:\Users\Akriti\PycharmProjects\p1\venv\Scripts\python.exe C:/Users/Akriti/Desktop/College/Winter_Term_20/Csc320/dhasmana-csc320/project-1-eliza/dhasmanaps1.py
+Hi! I'm Eliza. What's your name?
+Akriti
+Hi Akriti! How are you today?
+I am good
+How has your day been?
+It has been okay
+That is good to hear.
+yeah
+Are you bored?
+yes
+Do you wanna hear a joke?yes
+The first time I got a universal remote control I thought to myself, This changes everything Isn't that funny?
+hahahaha
+Earlier you said that It has been okay, can you elaborate on that?
+I meant it was okay
+Earlier you said that you are good, why did you say that?
+I have been good
+What do you mean by you have been good
+I haven't been too bad
+What did you do today?
+I went out for breakfast
+What do you mean that you went out for breakfast
+I ate food with friends outside
+Let's change the subject
+okay
+Are you bored?
+yes
+Do you want to play TicTacToe with me?
+okay
+You are X.
+ | | 
+-+-+-
+ | | 
+-+-+-
+ | | 
+It's your turn, enter your move!
+  Enter a row (1-3): 1
+  Enter a col (1-3): 2
+ |X| 
+-+-+-
+ | | 
+-+-+-
+ | | 
+Hmmm... It's my turn, let me think!
+ |X| 
+-+-+-
+ |O| 
+-+-+-
+ | | 
+It's your turn, enter your move!
+  Enter a row (1-3): 2
+  Enter a col (1-3): 1
+ |X| 
+-+-+-
+X|O| 
+-+-+-
+ | | 
+Hmmm... It's my turn, let me think!
+ |X| 
+-+-+-
+X|O| 
+-+-+-
+ |O| 
+It's your turn, enter your move!
+  Enter a row (1-3): 3
+  Enter a col (1-3): 1
+ |X| 
+-+-+-
+X|O| 
+-+-+-
+X|O| 
+Hmmm... It's my turn, let me think!
+O|X| 
+-+-+-
+X|O| 
+-+-+-
+X|O| 
+It's your turn, enter your move!
+  Enter a row (1-3): 2
+  Enter a col (1-3): 3
+O|X| 
+-+-+-
+X|O|X
+-+-+-
+X|O| 
+Hmmm... It's my turn, let me think!
+O|X|O
+-+-+-
+X|O|X
+-+-+-
+X|O| 
+It's your turn, enter your move!
+  Enter a row (1-3): 3
+  Enter a col (1-3): 3
+O|X|O
+-+-+-
+X|O|X
+-+-+-
+X|O|X
+It is a draw. We are equally intelligent.
+That was a good game!
+yes
+Are you bored?
+no
+I knowAkriti,I'm so entertaining that you could never be bored in my company!
+hahah
+Why do you say that hahah
+you are funny
+Before, you said I am funny, why did you say that?
+because you are
+Let's talk about something else.
+bye
+Goodbye Akriti!
+
+Process finished with exit code 0
