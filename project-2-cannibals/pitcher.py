@@ -74,5 +74,5 @@ class PitcherState(ProblemState):
                 self.pourq3Toq4(), self.pourq4Toq3()]
 
 Search(PitcherState(0,0), PitcherState(0,2))
-#Search(PitcherState(0,0), PitcherState(1,0), True) # verbose on
+Search(PitcherState(0,0), PitcherState(1,0), True) # verbose on
     
