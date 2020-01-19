@@ -62,6 +62,7 @@ class Search:
             print("Search failed")
         else:
             self.showPath(solution)
+
     def execute(self):
         while not self.q.empty():
             current = self.q.dequeue()
@@ -77,13 +78,15 @@ class Search:
                     print( "Number of successors:", len(successors))
                     print("Queue length:", self.q.size())
                     print("-------------------------------")
-                
+
         return None
+
     def showPath(self, node):
-        path = self.buildPath(node)        
+        path = self.buildPath(node)
         for current in path:
             print( current.state)
         print("Goal reached in", current.depth, "steps")
+
     def buildPath(self, node):
         """
         Beginning at the goal node, follow the parent links back
@@ -94,11 +97,11 @@ class Search:
         while node != None:
             result.insert(0, node)
             node = node.parent
-        return result
 
+        return result
 class ProblemState:
     """
-    An interface class for problem domains.  
+    An interface class for problem domains.
     """
     def __str__(self):
         """
