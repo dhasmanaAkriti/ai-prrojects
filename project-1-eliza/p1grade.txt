@@ -1,0 +1,13 @@
+Grade:
+
+Step 2: Customize it  25/25
+Step 3: A better changePerson()  25/25
+Step 4:  A memory  25/25
+Step 5: Make it your own  25/25 
+
+Total: 100
+
+Notes: good, although try as I might I couldn't get it to tell me a joke!  I did get it to crash at one point, but wasn't able to replicate the cause, so you're lucky this time!
+
+
+
