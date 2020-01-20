@@ -54,7 +54,7 @@ class Node:
         return result
 
 
-class Search:
+class improvedSearch:
     """
     A general Search class that can be used for any problem domain.
     Given instances of an initial state and a goal state in the
@@ -65,7 +65,7 @@ class Search:
 
     def __init__(self, initialState, goalState, verbose=False):
         self.q = Queue()
-        self.visited = []
+        self.visited = {}
         self.q.enqueue(Node(initialState, None, 0))
         self.goalState = goalState
         self.verbose = verbose
@@ -82,10 +82,10 @@ class Search:
             if self.goalState.equals(current.state):
                 return current
             else:
-                self.visited.append(current.state)
+                self.visited[current.state.dictkey()] = current.state
                 successors = current.state.applyOperators()
                 for nextState in successors:
-                    if not self.ifStateinVisited(nextState):
+                    if nextState.dictkey() not in self.visited:
                         n = Node(nextState, current, current.depth + 1)
                         self.q.enqueue(n)
                 if self.verbose:

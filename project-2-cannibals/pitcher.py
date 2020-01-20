@@ -2,6 +2,7 @@
 ### Implements the water pitcher puzzle for state space search
 
 from search import *
+from improvedSearch import *
 
 class PitcherState(ProblemState):
     """
@@ -74,5 +75,5 @@ class PitcherState(ProblemState):
                 self.pourq3Toq4(), self.pourq4Toq3()]
 
 Search(PitcherState(0,0), PitcherState(0,2))
-Search(PitcherState(0,0), PitcherState(1,0), True) # verbose on
+improvedSearch(PitcherState(0,0), PitcherState(1,0), True) # verbose on
     

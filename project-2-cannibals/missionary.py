@@ -3,6 +3,7 @@
 ### space search
 
 from search import *
+from improvedSearch import *
 
 class MissionaryState(ProblemState):
     """
@@ -128,6 +129,5 @@ class MissionaryState(ProblemState):
             successors.append(self.comesbackM2())
         return successors
 
-
-Search(MissionaryState((3, 3, 1), (0, 0, 0)), MissionaryState((0, 0, 0), (3, 3, 1)), True)
+improvedSearch(MissionaryState((3, 3, 1), (0, 0, 0)), MissionaryState((0, 0, 0), (3, 3, 1)), True)
 
