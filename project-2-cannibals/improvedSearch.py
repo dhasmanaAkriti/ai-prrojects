@@ -85,7 +85,7 @@ class improvedSearch:
                 self.visited[current.state.dictkey()] = current.state
                 successors = current.state.applyOperators()
                 for nextState in successors:
-                    if nextState.dictkey() not in self.visited:
+                    if self.visited.get(nextState.dictkey())== None:
                         n = Node(nextState, current, current.depth + 1)
                         self.q.enqueue(n)
                 if self.verbose:
@@ -95,13 +95,6 @@ class improvedSearch:
                     print("-------------------------------")
 
         return None
-
-    def ifStateinVisited(self, state):
-        bool = False
-        for otherState in self.visited:
-            if otherState.equals(state):
-                bool = True
-        return bool
 
     def showPath(self, node):
         path = self.buildPath(node)
