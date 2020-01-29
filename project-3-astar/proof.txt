@@ -1,0 +1,2792 @@
+C:\Users\Akriti\PycharmProjects\p1\venv\Scripts\python.exe C:/Users/Akriti/Desktop/College/Winter_Term_20/Csc320/dhasmana-csc320/project-3-astar/8puzzle.py
+A
+Expanded: 
+State: [[' ', 1, 3], [8, 2, 4], [7, 6, 5]]
+Depth: 0
+Number of successors: 2
+Expanded Nodes 1
+-------------------------------
+Expanded: 
+State: Operator: right
+[[1, ' ', 3], [8, 2, 4], [7, 6, 5]]
+Depth: 1
+Parent: [[' ', 1, 3], [8, 2, 4], [7, 6, 5]]
+Number of successors: 3
+Expanded Nodes 2
+-------------------------------
+[[' ', 1, 3], [8, 2, 4], [7, 6, 5]]
+Operator: right
+[[1, ' ', 3], [8, 2, 4], [7, 6, 5]]
+Operator: down
+[[1, 2, 3], [8, ' ', 4], [7, 6, 5]]
+Goal reached in 2 steps
+------------------------------------------------------------------------------------------------------------
+B
+Expanded: 
+State: [[1, 3, 4], [8, 6, 2], [' ', 7, 5]]
+Depth: 0
+Number of successors: 2
+Expanded Nodes 1
+-------------------------------
+Expanded: 
+State: Operator: right
+[[1, 3, 4], [8, 6, 2], [7, ' ', 5]]
+Depth: 1
+Parent: [[1, 3, 4], [8, 6, 2], [' ', 7, 5]]
+Number of successors: 3
+Expanded Nodes 2
+-------------------------------
+Expanded: 
+State: Operator: up
+[[1, 3, 4], [8, ' ', 2], [7, 6, 5]]
+Depth: 2
+Parent: Operator: right
+[[1, 3, 4], [8, 6, 2], [7, ' ', 5]]
+Number of successors: 4
+Expanded Nodes 3
+-------------------------------
+Expanded: 
+State: Operator: right
+[[1, 3, 4], [8, 2, ' '], [7, 6, 5]]
+Depth: 3
+Parent: Operator: up
+[[1, 3, 4], [8, ' ', 2], [7, 6, 5]]
+Number of successors: 3
+Expanded Nodes 4
+-------------------------------
+Expanded: 
+State: Operator: up
+[[1, 3, ' '], [8, 2, 4], [7, 6, 5]]
+Depth: 4
+Parent: Operator: right
+[[1, 3, 4], [8, 2, ' '], [7, 6, 5]]
+Number of successors: 2
+Expanded Nodes 5
+-------------------------------
+Expanded: 
+State: Operator: left
+[[1, ' ', 3], [8, 2, 4], [7, 6, 5]]
+Depth: 5
+Parent: Operator: up
+[[1, 3, ' '], [8, 2, 4], [7, 6, 5]]
+Number of successors: 3
+Expanded Nodes 6
+-------------------------------
+[[1, 3, 4], [8, 6, 2], [' ', 7, 5]]
+Operator: right
+[[1, 3, 4], [8, 6, 2], [7, ' ', 5]]
+Operator: up
+[[1, 3, 4], [8, ' ', 2], [7, 6, 5]]
+Operator: right
+[[1, 3, 4], [8, 2, ' '], [7, 6, 5]]
+Operator: up
+[[1, 3, ' '], [8, 2, 4], [7, 6, 5]]
+Operator: left
+[[1, ' ', 3], [8, 2, 4], [7, 6, 5]]
+Operator: down
+[[1, 2, 3], [8, ' ', 4], [7, 6, 5]]
+Goal reached in 6 steps
+------------------------------------------------------------------------------------------------------------
+C
+Expanded: 
+State: [[1, 3, ' '], [4, 2, 5], [8, 7, 6]]
+Depth: 0
+Number of successors: 2
+Expanded Nodes 1
+-------------------------------
+Expanded: 
+State: Operator: left
+[[1, ' ', 3], [4, 2, 5], [8, 7, 6]]
+Depth: 1
+Parent: [[1, 3, ' '], [4, 2, 5], [8, 7, 6]]
+Number of successors: 3
+Expanded Nodes 2
+-------------------------------
+Expanded: 
+State: Operator: down
+[[1, 2, 3], [4, ' ', 5], [8, 7, 6]]
+Depth: 2
+Parent: Operator: left
+[[1, ' ', 3], [4, 2, 5], [8, 7, 6]]
+Number of successors: 4
+Expanded Nodes 3
+-------------------------------
+Expanded: 
+State: Operator: left
+[[1, 2, 3], [' ', 4, 5], [8, 7, 6]]
+Depth: 3
+Parent: Operator: down
+[[1, 2, 3], [4, ' ', 5], [8, 7, 6]]
+Number of successors: 3
+Expanded Nodes 4
+-------------------------------
+Expanded: 
+State: Operator: down
+[[1, 2, 3], [8, 4, 5], [' ', 7, 6]]
+Depth: 4
+Parent: Operator: left
+[[1, 2, 3], [' ', 4, 5], [8, 7, 6]]
+Number of successors: 2
+Expanded Nodes 5
+-------------------------------
+Expanded: 
+State: Operator: right
+[[1, 2, 3], [8, 4, 5], [7, ' ', 6]]
+Depth: 5
+Parent: Operator: down
+[[1, 2, 3], [8, 4, 5], [' ', 7, 6]]
+Number of successors: 3
+Expanded Nodes 6
+-------------------------------
+Expanded: 
+State: Operator: right
+[[1, 2, 3], [8, 4, 5], [7, 6, ' ']]
+Depth: 6
+Parent: Operator: right
+[[1, 2, 3], [8, 4, 5], [7, ' ', 6]]
+Number of successors: 2
+Expanded Nodes 7
+-------------------------------
+Expanded: 
+State: Operator: up
+[[1, 2, 3], [8, 4, ' '], [7, 6, 5]]
+Depth: 7
+Parent: Operator: right
+[[1, 2, 3], [8, 4, 5], [7, 6, ' ']]
+Number of successors: 3
+Expanded Nodes 8
+-------------------------------
+[[1, 3, ' '], [4, 2, 5], [8, 7, 6]]
+Operator: left
+[[1, ' ', 3], [4, 2, 5], [8, 7, 6]]
+Operator: down
+[[1, 2, 3], [4, ' ', 5], [8, 7, 6]]
+Operator: left
+[[1, 2, 3], [' ', 4, 5], [8, 7, 6]]
+Operator: down
+[[1, 2, 3], [8, 4, 5], [' ', 7, 6]]
+Operator: right
+[[1, 2, 3], [8, 4, 5], [7, ' ', 6]]
+Operator: right
+[[1, 2, 3], [8, 4, 5], [7, 6, ' ']]
+Operator: up
+[[1, 2, 3], [8, 4, ' '], [7, 6, 5]]
+Operator: left
+[[1, 2, 3], [8, ' ', 4], [7, 6, 5]]
+Goal reached in 8 steps
+------------------------------------------------------------------------------------------------------------
+D
+Expanded: 
+State: [[7, 1, 2], [8, ' ', 3], [6, 5, 4]]
+Depth: 0
+Number of successors: 4
+Expanded Nodes 1
+-------------------------------
+Expanded: 
+State: Operator: up
+[[7, ' ', 2], [8, 1, 3], [6, 5, 4]]
+Depth: 1
+Parent: [[7, 1, 2], [8, ' ', 3], [6, 5, 4]]
+Number of successors: 3
+Expanded Nodes 2
+-------------------------------
+Expanded: 
+State: Operator: left
+[[7, 1, 2], [' ', 8, 3], [6, 5, 4]]
+Depth: 1
+Parent: [[7, 1, 2], [8, ' ', 3], [6, 5, 4]]
+Number of successors: 3
+Expanded Nodes 3
+-------------------------------
+Expanded: 
+State: Operator: right
+[[7, 1, 2], [8, 3, ' '], [6, 5, 4]]
+Depth: 1
+Parent: [[7, 1, 2], [8, ' ', 3], [6, 5, 4]]
+Number of successors: 3
+Expanded Nodes 4
+-------------------------------
+Expanded: 
+State: Operator: right
+[[7, 2, ' '], [8, 1, 3], [6, 5, 4]]
+Depth: 2
+Parent: Operator: up
+[[7, ' ', 2], [8, 1, 3], [6, 5, 4]]
+Number of successors: 2
+Expanded Nodes 5
+-------------------------------
+Expanded: 
+State: Operator: down
+[[7, 1, 2], [8, 3, 4], [6, 5, ' ']]
+Depth: 2
+Parent: Operator: right
+[[7, 1, 2], [8, 3, ' '], [6, 5, 4]]
+Number of successors: 2
+Expanded Nodes 6
+-------------------------------
+Expanded: 
+State: Operator: down
+[[7, 2, 3], [8, 1, ' '], [6, 5, 4]]
+Depth: 3
+Parent: Operator: right
+[[7, 2, ' '], [8, 1, 3], [6, 5, 4]]
+Number of successors: 3
+Expanded Nodes 7
+-------------------------------
+Expanded: 
+State: Operator: left
+[[7, 1, 2], [8, 3, 4], [6, ' ', 5]]
+Depth: 3
+Parent: Operator: down
+[[7, 1, 2], [8, 3, 4], [6, 5, ' ']]
+Number of successors: 3
+Expanded Nodes 8
+-------------------------------
+Expanded: 
+State: Operator: up
+[[' ', 1, 2], [7, 8, 3], [6, 5, 4]]
+Depth: 2
+Parent: Operator: left
+[[7, 1, 2], [' ', 8, 3], [6, 5, 4]]
+Number of successors: 2
+Expanded Nodes 9
+-------------------------------
+Expanded: 
+State: Operator: left
+[[7, 1, 2], [8, 3, 4], [' ', 6, 5]]
+Depth: 4
+Parent: Operator: left
+[[7, 1, 2], [8, 3, 4], [6, ' ', 5]]
+Number of successors: 2
+Expanded Nodes 10
+-------------------------------
+Expanded: 
+State: Operator: right
+[[1, ' ', 2], [7, 8, 3], [6, 5, 4]]
+Depth: 3
+Parent: Operator: up
+[[' ', 1, 2], [7, 8, 3], [6, 5, 4]]
+Number of successors: 3
+Expanded Nodes 11
+-------------------------------
+Expanded: 
+State: Operator: down
+[[7, 1, 2], [8, 5, 3], [6, ' ', 4]]
+Depth: 1
+Parent: [[7, 1, 2], [8, ' ', 3], [6, 5, 4]]
+Number of successors: 3
+Expanded Nodes 12
+-------------------------------
+Expanded: 
+State: Operator: right
+[[1, 2, ' '], [7, 8, 3], [6, 5, 4]]
+Depth: 4
+Parent: Operator: right
+[[1, ' ', 2], [7, 8, 3], [6, 5, 4]]
+Number of successors: 2
+Expanded Nodes 13
+-------------------------------
+Expanded: 
+State: Operator: left
+[[7, 1, 2], [8, 5, 3], [' ', 6, 4]]
+Depth: 2
+Parent: Operator: down
+[[7, 1, 2], [8, 5, 3], [6, ' ', 4]]
+Number of successors: 2
+Expanded Nodes 14
+-------------------------------
+Expanded: 
+State: Operator: down
+[[1, 2, 3], [7, 8, ' '], [6, 5, 4]]
+Depth: 5
+Parent: Operator: right
+[[1, 2, ' '], [7, 8, 3], [6, 5, 4]]
+Number of successors: 3
+Expanded Nodes 15
+-------------------------------
+Expanded: 
+State: Operator: down
+[[7, 2, 3], [8, 1, 4], [6, 5, ' ']]
+Depth: 4
+Parent: Operator: down
+[[7, 2, 3], [8, 1, ' '], [6, 5, 4]]
+Number of successors: 2
+Expanded Nodes 16
+-------------------------------
+Expanded: 
+State: Operator: down
+[[1, 2, 3], [7, 8, 4], [6, 5, ' ']]
+Depth: 6
+Parent: Operator: down
+[[1, 2, 3], [7, 8, ' '], [6, 5, 4]]
+Number of successors: 2
+Expanded Nodes 17
+-------------------------------
+Expanded: 
+State: Operator: left
+[[7, 2, 3], [8, 1, 4], [6, ' ', 5]]
+Depth: 5
+Parent: Operator: down
+[[7, 2, 3], [8, 1, 4], [6, 5, ' ']]
+Number of successors: 3
+Expanded Nodes 18
+-------------------------------
+Expanded: 
+State: Operator: left
+[[1, 2, 3], [7, 8, 4], [6, ' ', 5]]
+Depth: 7
+Parent: Operator: down
+[[1, 2, 3], [7, 8, 4], [6, 5, ' ']]
+Number of successors: 3
+Expanded Nodes 19
+-------------------------------
+Expanded: 
+State: Operator: left
+[[7, 2, 3], [8, 1, 4], [' ', 6, 5]]
+Depth: 6
+Parent: Operator: left
+[[7, 2, 3], [8, 1, 4], [6, ' ', 5]]
+Number of successors: 2
+Expanded Nodes 20
+-------------------------------
+Expanded: 
+State: Operator: left
+[[1, 2, 3], [7, 8, 4], [' ', 6, 5]]
+Depth: 8
+Parent: Operator: left
+[[1, 2, 3], [7, 8, 4], [6, ' ', 5]]
+Number of successors: 2
+Expanded Nodes 21
+-------------------------------
+Expanded: 
+State: Operator: up
+[[1, 2, 3], [' ', 8, 4], [7, 6, 5]]
+Depth: 9
+Parent: Operator: left
+[[1, 2, 3], [7, 8, 4], [' ', 6, 5]]
+Number of successors: 3
+Expanded Nodes 22
+-------------------------------
+[[7, 1, 2], [8, ' ', 3], [6, 5, 4]]
+Operator: left
+[[7, 1, 2], [' ', 8, 3], [6, 5, 4]]
+Operator: up
+[[' ', 1, 2], [7, 8, 3], [6, 5, 4]]
+Operator: right
+[[1, ' ', 2], [7, 8, 3], [6, 5, 4]]
+Operator: right
+[[1, 2, ' '], [7, 8, 3], [6, 5, 4]]
+Operator: down
+[[1, 2, 3], [7, 8, ' '], [6, 5, 4]]
+Operator: down
+[[1, 2, 3], [7, 8, 4], [6, 5, ' ']]
+Operator: left
+[[1, 2, 3], [7, 8, 4], [6, ' ', 5]]
+Operator: left
+[[1, 2, 3], [7, 8, 4], [' ', 6, 5]]
+Operator: up
+[[1, 2, 3], [' ', 8, 4], [7, 6, 5]]
+Operator: right
+[[1, 2, 3], [8, ' ', 4], [7, 6, 5]]
+Goal reached in 10 steps
+------------------------------------------------------------------------------------------------------------
+E
+Expanded: 
+State: [[8, 1, 2], [7, ' ', 4], [6, 5, 3]]
+Depth: 0
+Number of successors: 4
+Expanded Nodes 1
+-------------------------------
+Expanded: 
+State: Operator: up
+[[8, ' ', 2], [7, 1, 4], [6, 5, 3]]
+Depth: 1
+Parent: [[8, 1, 2], [7, ' ', 4], [6, 5, 3]]
+Number of successors: 3
+Expanded Nodes 2
+-------------------------------
+Expanded: 
+State: Operator: left
+[[8, 1, 2], [' ', 7, 4], [6, 5, 3]]
+Depth: 1
+Parent: [[8, 1, 2], [7, ' ', 4], [6, 5, 3]]
+Number of successors: 3
+Expanded Nodes 3
+-------------------------------
+Expanded: 
+State: Operator: right
+[[8, 1, 2], [7, 4, ' '], [6, 5, 3]]
+Depth: 1
+Parent: [[8, 1, 2], [7, ' ', 4], [6, 5, 3]]
+Number of successors: 3
+Expanded Nodes 4
+-------------------------------
+Expanded: 
+State: Operator: right
+[[8, 2, ' '], [7, 1, 4], [6, 5, 3]]
+Depth: 2
+Parent: Operator: up
+[[8, ' ', 2], [7, 1, 4], [6, 5, 3]]
+Number of successors: 2
+Expanded Nodes 5
+-------------------------------
+Expanded: 
+State: Operator: down
+[[8, 1, 2], [7, 4, 3], [6, 5, ' ']]
+Depth: 2
+Parent: Operator: right
+[[8, 1, 2], [7, 4, ' '], [6, 5, 3]]
+Number of successors: 2
+Expanded Nodes 6
+-------------------------------
+Expanded: 
+State: Operator: up
+[[' ', 1, 2], [8, 7, 4], [6, 5, 3]]
+Depth: 2
+Parent: Operator: left
+[[8, 1, 2], [' ', 7, 4], [6, 5, 3]]
+Number of successors: 2
+Expanded Nodes 7
+-------------------------------
+Expanded: 
+State: Operator: left
+[[8, 1, 2], [7, 4, 3], [6, ' ', 5]]
+Depth: 3
+Parent: Operator: down
+[[8, 1, 2], [7, 4, 3], [6, 5, ' ']]
+Number of successors: 3
+Expanded Nodes 8
+-------------------------------
+Expanded: 
+State: Operator: right
+[[1, ' ', 2], [8, 7, 4], [6, 5, 3]]
+Depth: 3
+Parent: Operator: up
+[[' ', 1, 2], [8, 7, 4], [6, 5, 3]]
+Number of successors: 3
+Expanded Nodes 9
+-------------------------------
+Expanded: 
+State: Operator: left
+[[8, 1, 2], [7, 4, 3], [' ', 6, 5]]
+Depth: 4
+Parent: Operator: left
+[[8, 1, 2], [7, 4, 3], [6, ' ', 5]]
+Number of successors: 2
+Expanded Nodes 10
+-------------------------------
+Expanded: 
+State: Operator: right
+[[1, 2, ' '], [8, 7, 4], [6, 5, 3]]
+Depth: 4
+Parent: Operator: right
+[[1, ' ', 2], [8, 7, 4], [6, 5, 3]]
+Number of successors: 2
+Expanded Nodes 11
+-------------------------------
+Expanded: 
+State: Operator: up
+[[8, 1, 2], [' ', 4, 3], [7, 6, 5]]
+Depth: 5
+Parent: Operator: left
+[[8, 1, 2], [7, 4, 3], [' ', 6, 5]]
+Number of successors: 3
+Expanded Nodes 12
+-------------------------------
+Expanded: 
+State: Operator: down
+[[8, 1, 2], [7, 5, 4], [6, ' ', 3]]
+Depth: 1
+Parent: [[8, 1, 2], [7, ' ', 4], [6, 5, 3]]
+Number of successors: 3
+Expanded Nodes 13
+-------------------------------
+Expanded: 
+State: Operator: up
+[[' ', 1, 2], [8, 4, 3], [7, 6, 5]]
+Depth: 6
+Parent: Operator: up
+[[8, 1, 2], [' ', 4, 3], [7, 6, 5]]
+Number of successors: 2
+Expanded Nodes 14
+-------------------------------
+Expanded: 
+State: Operator: left
+[[8, 1, 2], [7, 5, 4], [' ', 6, 3]]
+Depth: 2
+Parent: Operator: down
+[[8, 1, 2], [7, 5, 4], [6, ' ', 3]]
+Number of successors: 2
+Expanded Nodes 15
+-------------------------------
+Expanded: 
+State: Operator: right
+[[1, ' ', 2], [8, 4, 3], [7, 6, 5]]
+Depth: 7
+Parent: Operator: up
+[[' ', 1, 2], [8, 4, 3], [7, 6, 5]]
+Number of successors: 3
+Expanded Nodes 16
+-------------------------------
+Expanded: 
+State: Operator: up
+[[8, 1, 2], [' ', 5, 4], [7, 6, 3]]
+Depth: 3
+Parent: Operator: left
+[[8, 1, 2], [7, 5, 4], [' ', 6, 3]]
+Number of successors: 3
+Expanded Nodes 17
+-------------------------------
+Expanded: 
+State: Operator: right
+[[1, 2, ' '], [8, 4, 3], [7, 6, 5]]
+Depth: 8
+Parent: Operator: right
+[[1, ' ', 2], [8, 4, 3], [7, 6, 5]]
+Number of successors: 2
+Expanded Nodes 18
+-------------------------------
+Expanded: 
+State: Operator: up
+[[' ', 1, 2], [8, 5, 4], [7, 6, 3]]
+Depth: 4
+Parent: Operator: up
+[[8, 1, 2], [' ', 5, 4], [7, 6, 3]]
+Number of successors: 2
+Expanded Nodes 19
+-------------------------------
+Expanded: 
+State: Operator: down
+[[1, 2, 3], [8, 4, ' '], [7, 6, 5]]
+Depth: 9
+Parent: Operator: right
+[[1, 2, ' '], [8, 4, 3], [7, 6, 5]]
+Number of successors: 3
+Expanded Nodes 20
+-------------------------------
+Expanded: 
+State: Operator: right
+[[1, ' ', 2], [8, 5, 4], [7, 6, 3]]
+Depth: 5
+Parent: Operator: up
+[[' ', 1, 2], [8, 5, 4], [7, 6, 3]]
+Number of successors: 3
+Expanded Nodes 21
+-------------------------------
+[[8, 1, 2], [7, ' ', 4], [6, 5, 3]]
+Operator: right
+[[8, 1, 2], [7, 4, ' '], [6, 5, 3]]
+Operator: down
+[[8, 1, 2], [7, 4, 3], [6, 5, ' ']]
+Operator: left
+[[8, 1, 2], [7, 4, 3], [6, ' ', 5]]
+Operator: left
+[[8, 1, 2], [7, 4, 3], [' ', 6, 5]]
+Operator: up
+[[8, 1, 2], [' ', 4, 3], [7, 6, 5]]
+Operator: up
+[[' ', 1, 2], [8, 4, 3], [7, 6, 5]]
+Operator: right
+[[1, ' ', 2], [8, 4, 3], [7, 6, 5]]
+Operator: right
+[[1, 2, ' '], [8, 4, 3], [7, 6, 5]]
+Operator: down
+[[1, 2, 3], [8, 4, ' '], [7, 6, 5]]
+Operator: left
+[[1, 2, 3], [8, ' ', 4], [7, 6, 5]]
+Goal reached in 10 steps
+------------------------------------------------------------------------------------------------------------
+F
+Expanded: 
+State: [[2, 6, 3], [4, ' ', 5], [1, 8, 7]]
+Depth: 0
+Number of successors: 4
+Expanded Nodes 1
+-------------------------------
+Expanded: 
+State: Operator: up
+[[2, ' ', 3], [4, 6, 5], [1, 8, 7]]
+Depth: 1
+Parent: [[2, 6, 3], [4, ' ', 5], [1, 8, 7]]
+Number of successors: 3
+Expanded Nodes 2
+-------------------------------
+Expanded: 
+State: Operator: left
+[[2, 6, 3], [' ', 4, 5], [1, 8, 7]]
+Depth: 1
+Parent: [[2, 6, 3], [4, ' ', 5], [1, 8, 7]]
+Number of successors: 3
+Expanded Nodes 3
+-------------------------------
+Expanded: 
+State: Operator: left
+[[' ', 2, 3], [4, 6, 5], [1, 8, 7]]
+Depth: 2
+Parent: Operator: up
+[[2, ' ', 3], [4, 6, 5], [1, 8, 7]]
+Number of successors: 2
+Expanded Nodes 4
+-------------------------------
+Expanded: 
+State: Operator: down
+[[2, 6, 3], [1, 4, 5], [' ', 8, 7]]
+Depth: 2
+Parent: Operator: left
+[[2, 6, 3], [' ', 4, 5], [1, 8, 7]]
+Number of successors: 2
+Expanded Nodes 5
+-------------------------------
+Expanded: 
+State: Operator: down
+[[2, 6, 3], [4, 8, 5], [1, ' ', 7]]
+Depth: 1
+Parent: [[2, 6, 3], [4, ' ', 5], [1, 8, 7]]
+Number of successors: 3
+Expanded Nodes 6
+-------------------------------
+Expanded: 
+State: Operator: right
+[[2, 6, 3], [1, 4, 5], [8, ' ', 7]]
+Depth: 3
+Parent: Operator: down
+[[2, 6, 3], [1, 4, 5], [' ', 8, 7]]
+Number of successors: 3
+Expanded Nodes 7
+-------------------------------
+Expanded: 
+State: Operator: right
+[[2, 6, 3], [4, 8, 5], [1, 7, ' ']]
+Depth: 2
+Parent: Operator: down
+[[2, 6, 3], [4, 8, 5], [1, ' ', 7]]
+Number of successors: 2
+Expanded Nodes 8
+-------------------------------
+Expanded: 
+State: Operator: right
+[[2, 6, 3], [1, 4, 5], [8, 7, ' ']]
+Depth: 4
+Parent: Operator: right
+[[2, 6, 3], [1, 4, 5], [8, ' ', 7]]
+Number of successors: 2
+Expanded Nodes 9
+-------------------------------
+Expanded: 
+State: Operator: up
+[[2, 6, 3], [4, 8, ' '], [1, 7, 5]]
+Depth: 3
+Parent: Operator: right
+[[2, 6, 3], [4, 8, 5], [1, 7, ' ']]
+Number of successors: 3
+Expanded Nodes 10
+-------------------------------
+Expanded: 
+State: Operator: up
+[[2, 6, 3], [1, 4, ' '], [8, 7, 5]]
+Depth: 5
+Parent: Operator: right
+[[2, 6, 3], [1, 4, 5], [8, 7, ' ']]
+Number of successors: 3
+Expanded Nodes 11
+-------------------------------
+Expanded: 
+State: Operator: left
+[[2, 6, 3], [1, ' ', 4], [8, 7, 5]]
+Depth: 6
+Parent: Operator: up
+[[2, 6, 3], [1, 4, ' '], [8, 7, 5]]
+Number of successors: 4
+Expanded Nodes 12
+-------------------------------
+Expanded: 
+State: Operator: up
+[[2, ' ', 3], [1, 6, 4], [8, 7, 5]]
+Depth: 7
+Parent: Operator: left
+[[2, 6, 3], [1, ' ', 4], [8, 7, 5]]
+Number of successors: 3
+Expanded Nodes 13
+-------------------------------
+Expanded: 
+State: Operator: left
+[[' ', 2, 3], [1, 6, 4], [8, 7, 5]]
+Depth: 8
+Parent: Operator: up
+[[2, ' ', 3], [1, 6, 4], [8, 7, 5]]
+Number of successors: 2
+Expanded Nodes 14
+-------------------------------
+Expanded: 
+State: Operator: down
+[[1, 2, 3], [' ', 6, 4], [8, 7, 5]]
+Depth: 9
+Parent: Operator: left
+[[' ', 2, 3], [1, 6, 4], [8, 7, 5]]
+Number of successors: 3
+Expanded Nodes 15
+-------------------------------
+Expanded: 
+State: Operator: down
+[[1, 2, 3], [8, 6, 4], [' ', 7, 5]]
+Depth: 10
+Parent: Operator: down
+[[1, 2, 3], [' ', 6, 4], [8, 7, 5]]
+Number of successors: 2
+Expanded Nodes 16
+-------------------------------
+Expanded: 
+State: Operator: right
+[[1, 2, 3], [8, 6, 4], [7, ' ', 5]]
+Depth: 11
+Parent: Operator: down
+[[1, 2, 3], [8, 6, 4], [' ', 7, 5]]
+Number of successors: 3
+Expanded Nodes 17
+-------------------------------
+[[2, 6, 3], [4, ' ', 5], [1, 8, 7]]
+Operator: left
+[[2, 6, 3], [' ', 4, 5], [1, 8, 7]]
+Operator: down
+[[2, 6, 3], [1, 4, 5], [' ', 8, 7]]
+Operator: right
+[[2, 6, 3], [1, 4, 5], [8, ' ', 7]]
+Operator: right
+[[2, 6, 3], [1, 4, 5], [8, 7, ' ']]
+Operator: up
+[[2, 6, 3], [1, 4, ' '], [8, 7, 5]]
+Operator: left
+[[2, 6, 3], [1, ' ', 4], [8, 7, 5]]
+Operator: up
+[[2, ' ', 3], [1, 6, 4], [8, 7, 5]]
+Operator: left
+[[' ', 2, 3], [1, 6, 4], [8, 7, 5]]
+Operator: down
+[[1, 2, 3], [' ', 6, 4], [8, 7, 5]]
+Operator: down
+[[1, 2, 3], [8, 6, 4], [' ', 7, 5]]
+Operator: right
+[[1, 2, 3], [8, 6, 4], [7, ' ', 5]]
+Operator: up
+[[1, 2, 3], [8, ' ', 4], [7, 6, 5]]
+Goal reached in 12 steps
+------------------------------------------------------------------------------------------------------------
+G
+Expanded: 
+State: [[7, 3, 4], [6, 1, 5], [8, ' ', 2]]
+Depth: 0
+Number of successors: 3
+Expanded Nodes 1
+-------------------------------
+Expanded: 
+State: Operator: right
+[[7, 3, 4], [6, 1, 5], [8, 2, ' ']]
+Depth: 1
+Parent: [[7, 3, 4], [6, 1, 5], [8, ' ', 2]]
+Number of successors: 2
+Expanded Nodes 2
+-------------------------------
+Expanded: 
+State: Operator: up
+[[7, 3, 4], [6, 1, ' '], [8, 2, 5]]
+Depth: 2
+Parent: Operator: right
+[[7, 3, 4], [6, 1, 5], [8, 2, ' ']]
+Number of successors: 3
+Expanded Nodes 3
+-------------------------------
+Expanded: 
+State: Operator: up
+[[7, 3, ' '], [6, 1, 4], [8, 2, 5]]
+Depth: 3
+Parent: Operator: up
+[[7, 3, 4], [6, 1, ' '], [8, 2, 5]]
+Number of successors: 2
+Expanded Nodes 4
+-------------------------------
+Expanded: 
+State: Operator: left
+[[7, ' ', 3], [6, 1, 4], [8, 2, 5]]
+Depth: 4
+Parent: Operator: up
+[[7, 3, ' '], [6, 1, 4], [8, 2, 5]]
+Number of successors: 3
+Expanded Nodes 5
+-------------------------------
+Expanded: 
+State: Operator: down
+[[7, 1, 3], [6, ' ', 4], [8, 2, 5]]
+Depth: 5
+Parent: Operator: left
+[[7, ' ', 3], [6, 1, 4], [8, 2, 5]]
+Number of successors: 4
+Expanded Nodes 6
+-------------------------------
+Expanded: 
+State: Operator: down
+[[7, 1, 3], [6, 2, 4], [8, ' ', 5]]
+Depth: 6
+Parent: Operator: down
+[[7, 1, 3], [6, ' ', 4], [8, 2, 5]]
+Number of successors: 3
+Expanded Nodes 7
+-------------------------------
+Expanded: 
+State: Operator: left
+[[7, 1, 3], [' ', 6, 4], [8, 2, 5]]
+Depth: 6
+Parent: Operator: down
+[[7, 1, 3], [6, ' ', 4], [8, 2, 5]]
+Number of successors: 3
+Expanded Nodes 8
+-------------------------------
+Expanded: 
+State: Operator: up
+[[' ', 1, 3], [7, 6, 4], [8, 2, 5]]
+Depth: 7
+Parent: Operator: left
+[[7, 1, 3], [' ', 6, 4], [8, 2, 5]]
+Number of successors: 2
+Expanded Nodes 9
+-------------------------------
+Expanded: 
+State: Operator: down
+[[7, 1, 3], [8, 6, 4], [' ', 2, 5]]
+Depth: 7
+Parent: Operator: left
+[[7, 1, 3], [' ', 6, 4], [8, 2, 5]]
+Number of successors: 2
+Expanded Nodes 10
+-------------------------------
+Expanded: 
+State: Operator: right
+[[1, ' ', 3], [7, 6, 4], [8, 2, 5]]
+Depth: 8
+Parent: Operator: up
+[[' ', 1, 3], [7, 6, 4], [8, 2, 5]]
+Number of successors: 3
+Expanded Nodes 11
+-------------------------------
+Expanded: 
+State: Operator: right
+[[7, 1, 3], [8, 6, 4], [2, ' ', 5]]
+Depth: 8
+Parent: Operator: down
+[[7, 1, 3], [8, 6, 4], [' ', 2, 5]]
+Number of successors: 3
+Expanded Nodes 12
+-------------------------------
+Expanded: 
+State: Operator: down
+[[1, 6, 3], [7, ' ', 4], [8, 2, 5]]
+Depth: 9
+Parent: Operator: right
+[[1, ' ', 3], [7, 6, 4], [8, 2, 5]]
+Number of successors: 4
+Expanded Nodes 13
+-------------------------------
+Expanded: 
+State: Operator: left
+[[7, 1, 3], [6, 2, 4], [' ', 8, 5]]
+Depth: 7
+Parent: Operator: down
+[[7, 1, 3], [6, 2, 4], [8, ' ', 5]]
+Number of successors: 2
+Expanded Nodes 14
+-------------------------------
+Expanded: 
+State: Operator: up
+[[7, 3, 4], [6, ' ', 5], [8, 1, 2]]
+Depth: 1
+Parent: [[7, 3, 4], [6, 1, 5], [8, ' ', 2]]
+Number of successors: 4
+Expanded Nodes 15
+-------------------------------
+Expanded: 
+State: Operator: up
+[[7, 1, 3], [' ', 2, 4], [6, 8, 5]]
+Depth: 8
+Parent: Operator: left
+[[7, 1, 3], [6, 2, 4], [' ', 8, 5]]
+Number of successors: 3
+Expanded Nodes 16
+-------------------------------
+Expanded: 
+State: Operator: left
+[[7, 3, 4], [' ', 6, 5], [8, 1, 2]]
+Depth: 2
+Parent: Operator: up
+[[7, 3, 4], [6, ' ', 5], [8, 1, 2]]
+Number of successors: 3
+Expanded Nodes 17
+-------------------------------
+Expanded: 
+State: Operator: left
+[[7, 3, 4], [6, ' ', 1], [8, 2, 5]]
+Depth: 3
+Parent: Operator: up
+[[7, 3, 4], [6, 1, ' '], [8, 2, 5]]
+Number of successors: 4
+Expanded Nodes 18
+-------------------------------
+Expanded: 
+State: Operator: right
+[[1, 3, ' '], [7, 6, 4], [8, 2, 5]]
+Depth: 9
+Parent: Operator: right
+[[1, ' ', 3], [7, 6, 4], [8, 2, 5]]
+Number of successors: 2
+Expanded Nodes 19
+-------------------------------
+Expanded: 
+State: Operator: left
+[[7, 3, 4], [' ', 6, 1], [8, 2, 5]]
+Depth: 4
+Parent: Operator: left
+[[7, 3, 4], [6, ' ', 1], [8, 2, 5]]
+Number of successors: 3
+Expanded Nodes 20
+-------------------------------
+Expanded: 
+State: Operator: up
+[[' ', 3, 4], [7, 6, 5], [8, 1, 2]]
+Depth: 3
+Parent: Operator: left
+[[7, 3, 4], [' ', 6, 5], [8, 1, 2]]
+Number of successors: 2
+Expanded Nodes 21
+-------------------------------
+Expanded: 
+State: Operator: down
+[[7, 3, 4], [8, 6, 1], [' ', 2, 5]]
+Depth: 5
+Parent: Operator: left
+[[7, 3, 4], [' ', 6, 1], [8, 2, 5]]
+Number of successors: 2
+Expanded Nodes 22
+-------------------------------
+Expanded: 
+State: Operator: down
+[[7, 3, 4], [8, 6, 5], [' ', 1, 2]]
+Depth: 3
+Parent: Operator: left
+[[7, 3, 4], [' ', 6, 5], [8, 1, 2]]
+Number of successors: 2
+Expanded Nodes 23
+-------------------------------
+Expanded: 
+State: Operator: down
+[[7, 3, 4], [6, 2, 1], [8, ' ', 5]]
+Depth: 4
+Parent: Operator: left
+[[7, 3, 4], [6, ' ', 1], [8, 2, 5]]
+Number of successors: 3
+Expanded Nodes 24
+-------------------------------
+Expanded: 
+State: Operator: right
+[[7, 3, 4], [8, 6, 5], [1, ' ', 2]]
+Depth: 4
+Parent: Operator: down
+[[7, 3, 4], [8, 6, 5], [' ', 1, 2]]
+Number of successors: 3
+Expanded Nodes 25
+-------------------------------
+Expanded: 
+State: Operator: up
+[[' ', 3, 4], [7, 6, 1], [8, 2, 5]]
+Depth: 5
+Parent: Operator: left
+[[7, 3, 4], [' ', 6, 1], [8, 2, 5]]
+Number of successors: 2
+Expanded Nodes 26
+-------------------------------
+Expanded: 
+State: Operator: right
+[[7, 1, 3], [6, 4, ' '], [8, 2, 5]]
+Depth: 6
+Parent: Operator: down
+[[7, 1, 3], [6, ' ', 4], [8, 2, 5]]
+Number of successors: 3
+Expanded Nodes 27
+-------------------------------
+Expanded: 
+State: Operator: up
+[[7, 1, 3], [8, ' ', 4], [2, 6, 5]]
+Depth: 9
+Parent: Operator: right
+[[7, 1, 3], [8, 6, 4], [2, ' ', 5]]
+Number of successors: 4
+Expanded Nodes 28
+-------------------------------
+Expanded: 
+State: Operator: up
+[[7, 3, 4], [8, ' ', 5], [1, 6, 2]]
+Depth: 5
+Parent: Operator: right
+[[7, 3, 4], [8, 6, 5], [1, ' ', 2]]
+Number of successors: 4
+Expanded Nodes 29
+-------------------------------
+Expanded: 
+State: Operator: right
+[[7, 3, 4], [8, 6, 5], [1, 2, ' ']]
+Depth: 5
+Parent: Operator: right
+[[7, 3, 4], [8, 6, 5], [1, ' ', 2]]
+Number of successors: 2
+Expanded Nodes 30
+-------------------------------
+Expanded: 
+State: Operator: left
+[[' ', 7, 3], [6, 1, 4], [8, 2, 5]]
+Depth: 5
+Parent: Operator: left
+[[7, ' ', 3], [6, 1, 4], [8, 2, 5]]
+Number of successors: 2
+Expanded Nodes 31
+-------------------------------
+Expanded: 
+State: Operator: left
+[[7, 3, 4], [6, 1, 5], [' ', 8, 2]]
+Depth: 1
+Parent: [[7, 3, 4], [6, 1, 5], [8, ' ', 2]]
+Number of successors: 2
+Expanded Nodes 32
+-------------------------------
+Expanded: 
+State: Operator: down
+[[1, 6, 3], [7, 2, 4], [8, ' ', 5]]
+Depth: 10
+Parent: Operator: down
+[[1, 6, 3], [7, ' ', 4], [8, 2, 5]]
+Number of successors: 3
+Expanded Nodes 33
+-------------------------------
+Expanded: 
+State: Operator: up
+[[7, 3, 4], [8, 6, ' '], [1, 2, 5]]
+Depth: 6
+Parent: Operator: right
+[[7, 3, 4], [8, 6, 5], [1, 2, ' ']]
+Number of successors: 3
+Expanded Nodes 34
+-------------------------------
+Expanded: 
+State: Operator: up
+[[7, 3, 4], [' ', 1, 5], [6, 8, 2]]
+Depth: 2
+Parent: Operator: left
+[[7, 3, 4], [6, 1, 5], [' ', 8, 2]]
+Number of successors: 3
+Expanded Nodes 35
+-------------------------------
+Expanded: 
+State: Operator: right
+[[7, 1, 3], [6, 2, 4], [8, 5, ' ']]
+Depth: 7
+Parent: Operator: down
+[[7, 1, 3], [6, 2, 4], [8, ' ', 5]]
+Number of successors: 2
+Expanded Nodes 36
+-------------------------------
+Expanded: 
+State: Operator: up
+[[' ', 1, 3], [7, 2, 4], [6, 8, 5]]
+Depth: 9
+Parent: Operator: up
+[[7, 1, 3], [' ', 2, 4], [6, 8, 5]]
+Number of successors: 2
+Expanded Nodes 37
+-------------------------------
+Expanded: 
+State: Operator: up
+[[7, 3, ' '], [8, 6, 4], [1, 2, 5]]
+Depth: 7
+Parent: Operator: up
+[[7, 3, 4], [8, 6, ' '], [1, 2, 5]]
+Number of successors: 2
+Expanded Nodes 38
+-------------------------------
+Expanded: 
+State: Operator: up
+[[' ', 3, 4], [7, 1, 5], [6, 8, 2]]
+Depth: 3
+Parent: Operator: up
+[[7, 3, 4], [' ', 1, 5], [6, 8, 2]]
+Number of successors: 2
+Expanded Nodes 39
+-------------------------------
+Expanded: 
+State: Operator: right
+[[7, 3, 4], [1, ' ', 5], [6, 8, 2]]
+Depth: 3
+Parent: Operator: up
+[[7, 3, 4], [' ', 1, 5], [6, 8, 2]]
+Number of successors: 4
+Expanded Nodes 40
+-------------------------------
+Expanded: 
+State: Operator: right
+[[1, ' ', 3], [7, 2, 4], [6, 8, 5]]
+Depth: 10
+Parent: Operator: up
+[[' ', 1, 3], [7, 2, 4], [6, 8, 5]]
+Number of successors: 3
+Expanded Nodes 41
+-------------------------------
+Expanded: 
+State: Operator: down
+[[7, 3, 4], [1, 8, 5], [6, ' ', 2]]
+Depth: 4
+Parent: Operator: right
+[[7, 3, 4], [1, ' ', 5], [6, 8, 2]]
+Number of successors: 3
+Expanded Nodes 42
+-------------------------------
+Expanded: 
+State: Operator: down
+[[1, 2, 3], [7, ' ', 4], [6, 8, 5]]
+Depth: 11
+Parent: Operator: right
+[[1, ' ', 3], [7, 2, 4], [6, 8, 5]]
+Number of successors: 4
+Expanded Nodes 43
+-------------------------------
+Expanded: 
+State: Operator: right
+[[7, 3, 4], [1, 8, 5], [6, 2, ' ']]
+Depth: 5
+Parent: Operator: down
+[[7, 3, 4], [1, 8, 5], [6, ' ', 2]]
+Number of successors: 2
+Expanded Nodes 44
+-------------------------------
+Expanded: 
+State: Operator: left
+[[7, 3, 4], [1, 8, 5], [' ', 6, 2]]
+Depth: 5
+Parent: Operator: down
+[[7, 3, 4], [1, 8, 5], [6, ' ', 2]]
+Number of successors: 2
+Expanded Nodes 45
+-------------------------------
+Expanded: 
+State: Operator: down
+[[1, 2, 3], [7, 8, 4], [6, ' ', 5]]
+Depth: 12
+Parent: Operator: down
+[[1, 2, 3], [7, ' ', 4], [6, 8, 5]]
+Number of successors: 3
+Expanded Nodes 46
+-------------------------------
+Expanded: 
+State: Operator: up
+[[7, 3, 4], [1, 8, ' '], [6, 2, 5]]
+Depth: 6
+Parent: Operator: right
+[[7, 3, 4], [1, 8, 5], [6, 2, ' ']]
+Number of successors: 3
+Expanded Nodes 47
+-------------------------------
+Expanded: 
+State: Operator: left
+[[1, 2, 3], [7, 8, 4], [' ', 6, 5]]
+Depth: 13
+Parent: Operator: down
+[[1, 2, 3], [7, 8, 4], [6, ' ', 5]]
+Number of successors: 2
+Expanded Nodes 48
+-------------------------------
+Expanded: 
+State: Operator: up
+[[7, 3, ' '], [1, 8, 4], [6, 2, 5]]
+Depth: 7
+Parent: Operator: up
+[[7, 3, 4], [1, 8, ' '], [6, 2, 5]]
+Number of successors: 2
+Expanded Nodes 49
+-------------------------------
+Expanded: 
+State: Operator: up
+[[1, 2, 3], [' ', 8, 4], [7, 6, 5]]
+Depth: 14
+Parent: Operator: left
+[[1, 2, 3], [7, 8, 4], [' ', 6, 5]]
+Number of successors: 3
+Expanded Nodes 50
+-------------------------------
+Expanded: 
+State: Operator: left
+[[7, ' ', 3], [1, 8, 4], [6, 2, 5]]
+Depth: 8
+Parent: Operator: up
+[[7, 3, ' '], [1, 8, 4], [6, 2, 5]]
+Number of successors: 3
+Expanded Nodes 51
+-------------------------------
+[[7, 3, 4], [6, 1, 5], [8, ' ', 2]]
+Operator: right
+[[7, 3, 4], [6, 1, 5], [8, 2, ' ']]
+Operator: up
+[[7, 3, 4], [6, 1, ' '], [8, 2, 5]]
+Operator: up
+[[7, 3, ' '], [6, 1, 4], [8, 2, 5]]
+Operator: left
+[[7, ' ', 3], [6, 1, 4], [8, 2, 5]]
+Operator: down
+[[7, 1, 3], [6, ' ', 4], [8, 2, 5]]
+Operator: down
+[[7, 1, 3], [6, 2, 4], [8, ' ', 5]]
+Operator: left
+[[7, 1, 3], [6, 2, 4], [' ', 8, 5]]
+Operator: up
+[[7, 1, 3], [' ', 2, 4], [6, 8, 5]]
+Operator: up
+[[' ', 1, 3], [7, 2, 4], [6, 8, 5]]
+Operator: right
+[[1, ' ', 3], [7, 2, 4], [6, 8, 5]]
+Operator: down
+[[1, 2, 3], [7, ' ', 4], [6, 8, 5]]
+Operator: down
+[[1, 2, 3], [7, 8, 4], [6, ' ', 5]]
+Operator: left
+[[1, 2, 3], [7, 8, 4], [' ', 6, 5]]
+Operator: up
+[[1, 2, 3], [' ', 8, 4], [7, 6, 5]]
+Operator: right
+[[1, 2, 3], [8, ' ', 4], [7, 6, 5]]
+Goal reached in 15 steps
+------------------------------------------------------------------------------------------------------------
+H
+Expanded: 
+State: [[7, 4, 5], [6, ' ', 3], [8, 1, 2]]
+Depth: 0
+Number of successors: 4
+Expanded Nodes 1
+-------------------------------
+Expanded: 
+State: Operator: up
+[[7, ' ', 5], [6, 4, 3], [8, 1, 2]]
+Depth: 1
+Parent: [[7, 4, 5], [6, ' ', 3], [8, 1, 2]]
+Number of successors: 3
+Expanded Nodes 2
+-------------------------------
+Expanded: 
+State: Operator: left
+[[7, 4, 5], [' ', 6, 3], [8, 1, 2]]
+Depth: 1
+Parent: [[7, 4, 5], [6, ' ', 3], [8, 1, 2]]
+Number of successors: 3
+Expanded Nodes 3
+-------------------------------
+Expanded: 
+State: Operator: down
+[[7, 4, 5], [6, 1, 3], [8, ' ', 2]]
+Depth: 1
+Parent: [[7, 4, 5], [6, ' ', 3], [8, 1, 2]]
+Number of successors: 3
+Expanded Nodes 4
+-------------------------------
+Expanded: 
+State: Operator: up
+[[' ', 4, 5], [7, 6, 3], [8, 1, 2]]
+Depth: 2
+Parent: Operator: left
+[[7, 4, 5], [' ', 6, 3], [8, 1, 2]]
+Number of successors: 2
+Expanded Nodes 5
+-------------------------------
+Expanded: 
+State: Operator: down
+[[7, 4, 5], [8, 6, 3], [' ', 1, 2]]
+Depth: 2
+Parent: Operator: left
+[[7, 4, 5], [' ', 6, 3], [8, 1, 2]]
+Number of successors: 2
+Expanded Nodes 6
+-------------------------------
+Expanded: 
+State: Operator: right
+[[7, 4, 5], [6, 1, 3], [8, 2, ' ']]
+Depth: 2
+Parent: Operator: down
+[[7, 4, 5], [6, 1, 3], [8, ' ', 2]]
+Number of successors: 2
+Expanded Nodes 7
+-------------------------------
+Expanded: 
+State: Operator: right
+[[7, 4, 5], [8, 6, 3], [1, ' ', 2]]
+Depth: 3
+Parent: Operator: down
+[[7, 4, 5], [8, 6, 3], [' ', 1, 2]]
+Number of successors: 3
+Expanded Nodes 8
+-------------------------------
+Expanded: 
+State: Operator: up
+[[7, 4, 5], [8, ' ', 3], [1, 6, 2]]
+Depth: 4
+Parent: Operator: right
+[[7, 4, 5], [8, 6, 3], [1, ' ', 2]]
+Number of successors: 4
+Expanded Nodes 9
+-------------------------------
+Expanded: 
+State: Operator: right
+[[7, 4, 5], [8, 6, 3], [1, 2, ' ']]
+Depth: 4
+Parent: Operator: right
+[[7, 4, 5], [8, 6, 3], [1, ' ', 2]]
+Number of successors: 2
+Expanded Nodes 10
+-------------------------------
+Expanded: 
+State: Operator: up
+[[7, ' ', 5], [8, 4, 3], [1, 6, 2]]
+Depth: 5
+Parent: Operator: up
+[[7, 4, 5], [8, ' ', 3], [1, 6, 2]]
+Number of successors: 3
+Expanded Nodes 11
+-------------------------------
+Expanded: 
+State: Operator: up
+[[7, 4, 5], [8, 6, ' '], [1, 2, 3]]
+Depth: 5
+Parent: Operator: right
+[[7, 4, 5], [8, 6, 3], [1, 2, ' ']]
+Number of successors: 3
+Expanded Nodes 12
+-------------------------------
+Expanded: 
+State: Operator: left
+[[' ', 7, 5], [8, 4, 3], [1, 6, 2]]
+Depth: 6
+Parent: Operator: up
+[[7, ' ', 5], [8, 4, 3], [1, 6, 2]]
+Number of successors: 2
+Expanded Nodes 13
+-------------------------------
+Expanded: 
+State: Operator: left
+[[7, 4, 5], [' ', 8, 3], [1, 6, 2]]
+Depth: 5
+Parent: Operator: up
+[[7, 4, 5], [8, ' ', 3], [1, 6, 2]]
+Number of successors: 3
+Expanded Nodes 14
+-------------------------------
+Expanded: 
+State: Operator: right
+[[7, 5, ' '], [6, 4, 3], [8, 1, 2]]
+Depth: 2
+Parent: Operator: up
+[[7, ' ', 5], [6, 4, 3], [8, 1, 2]]
+Number of successors: 2
+Expanded Nodes 15
+-------------------------------
+Expanded: 
+State: Operator: down
+[[7, 4, 5], [1, 8, 3], [' ', 6, 2]]
+Depth: 6
+Parent: Operator: left
+[[7, 4, 5], [' ', 8, 3], [1, 6, 2]]
+Number of successors: 2
+Expanded Nodes 16
+-------------------------------
+Expanded: 
+State: Operator: down
+[[7, 5, 3], [6, 4, ' '], [8, 1, 2]]
+Depth: 3
+Parent: Operator: right
+[[7, 5, ' '], [6, 4, 3], [8, 1, 2]]
+Number of successors: 3
+Expanded Nodes 17
+-------------------------------
+Expanded: 
+State: Operator: left
+[[' ', 7, 5], [6, 4, 3], [8, 1, 2]]
+Depth: 2
+Parent: Operator: up
+[[7, ' ', 5], [6, 4, 3], [8, 1, 2]]
+Number of successors: 2
+Expanded Nodes 18
+-------------------------------
+Expanded: 
+State: Operator: left
+[[7, 5, 3], [6, ' ', 4], [8, 1, 2]]
+Depth: 4
+Parent: Operator: down
+[[7, 5, 3], [6, 4, ' '], [8, 1, 2]]
+Number of successors: 4
+Expanded Nodes 19
+-------------------------------
+Expanded: 
+State: Operator: right
+[[7, 4, 5], [8, 3, ' '], [1, 6, 2]]
+Depth: 5
+Parent: Operator: up
+[[7, 4, 5], [8, ' ', 3], [1, 6, 2]]
+Number of successors: 3
+Expanded Nodes 20
+-------------------------------
+Expanded: 
+State: Operator: right
+[[7, 4, 5], [6, 3, ' '], [8, 1, 2]]
+Depth: 1
+Parent: [[7, 4, 5], [6, ' ', 3], [8, 1, 2]]
+Number of successors: 3
+Expanded Nodes 21
+-------------------------------
+Expanded: 
+State: Operator: left
+[[7, 5, 3], [' ', 6, 4], [8, 1, 2]]
+Depth: 5
+Parent: Operator: left
+[[7, 5, 3], [6, ' ', 4], [8, 1, 2]]
+Number of successors: 3
+Expanded Nodes 22
+-------------------------------
+Expanded: 
+State: Operator: up
+[[7, 4, ' '], [8, 3, 5], [1, 6, 2]]
+Depth: 6
+Parent: Operator: right
+[[7, 4, 5], [8, 3, ' '], [1, 6, 2]]
+Number of successors: 2
+Expanded Nodes 23
+-------------------------------
+Expanded: 
+State: Operator: down
+[[7, 5, 3], [8, 6, 4], [' ', 1, 2]]
+Depth: 6
+Parent: Operator: left
+[[7, 5, 3], [' ', 6, 4], [8, 1, 2]]
+Number of successors: 2
+Expanded Nodes 24
+-------------------------------
+Expanded: 
+State: Operator: left
+[[7, ' ', 4], [8, 3, 5], [1, 6, 2]]
+Depth: 7
+Parent: Operator: up
+[[7, 4, ' '], [8, 3, 5], [1, 6, 2]]
+Number of successors: 3
+Expanded Nodes 25
+-------------------------------
+Expanded: 
+State: Operator: right
+[[7, 5, 3], [8, 6, 4], [1, ' ', 2]]
+Depth: 7
+Parent: Operator: down
+[[7, 5, 3], [8, 6, 4], [' ', 1, 2]]
+Number of successors: 3
+Expanded Nodes 26
+-------------------------------
+Expanded: 
+State: Operator: down
+[[7, 4, 5], [8, 3, 2], [1, 6, ' ']]
+Depth: 6
+Parent: Operator: right
+[[7, 4, 5], [8, 3, ' '], [1, 6, 2]]
+Number of successors: 2
+Expanded Nodes 27
+-------------------------------
+Expanded: 
+State: Operator: right
+[[7, 5, 3], [8, 6, 4], [1, 2, ' ']]
+Depth: 8
+Parent: Operator: right
+[[7, 5, 3], [8, 6, 4], [1, ' ', 2]]
+Number of successors: 2
+Expanded Nodes 28
+-------------------------------
+Expanded: 
+State: Operator: up
+[[7, 4, ' '], [6, 3, 5], [8, 1, 2]]
+Depth: 2
+Parent: Operator: right
+[[7, 4, 5], [6, 3, ' '], [8, 1, 2]]
+Number of successors: 2
+Expanded Nodes 29
+-------------------------------
+Expanded: 
+State: Operator: down
+[[7, 4, 5], [6, 3, 2], [8, 1, ' ']]
+Depth: 2
+Parent: Operator: right
+[[7, 4, 5], [6, 3, ' '], [8, 1, 2]]
+Number of successors: 2
+Expanded Nodes 30
+-------------------------------
+Expanded: 
+State: Operator: left
+[[7, ' ', 4], [6, 3, 5], [8, 1, 2]]
+Depth: 3
+Parent: Operator: up
+[[7, 4, ' '], [6, 3, 5], [8, 1, 2]]
+Number of successors: 3
+Expanded Nodes 31
+-------------------------------
+Expanded: 
+State: Operator: up
+[[' ', 5, 3], [7, 6, 4], [8, 1, 2]]
+Depth: 6
+Parent: Operator: left
+[[7, 5, 3], [' ', 6, 4], [8, 1, 2]]
+Number of successors: 2
+Expanded Nodes 32
+-------------------------------
+Expanded: 
+State: Operator: down
+[[7, 3, 4], [8, ' ', 5], [1, 6, 2]]
+Depth: 8
+Parent: Operator: left
+[[7, ' ', 4], [8, 3, 5], [1, 6, 2]]
+Number of successors: 4
+Expanded Nodes 33
+-------------------------------
+Expanded: 
+State: Operator: right
+[[7, 5, ' '], [8, 4, 3], [1, 6, 2]]
+Depth: 6
+Parent: Operator: up
+[[7, ' ', 5], [8, 4, 3], [1, 6, 2]]
+Number of successors: 2
+Expanded Nodes 34
+-------------------------------
+Expanded: 
+State: Operator: up
+[[7, 5, 3], [8, ' ', 4], [1, 6, 2]]
+Depth: 8
+Parent: Operator: right
+[[7, 5, 3], [8, 6, 4], [1, ' ', 2]]
+Number of successors: 4
+Expanded Nodes 35
+-------------------------------
+Expanded: 
+State: Operator: down
+[[7, 5, 3], [8, 4, ' '], [1, 6, 2]]
+Depth: 7
+Parent: Operator: right
+[[7, 5, ' '], [8, 4, 3], [1, 6, 2]]
+Number of successors: 3
+Expanded Nodes 36
+-------------------------------
+Expanded: 
+State: Operator: down
+[[7, 3, 4], [6, ' ', 5], [8, 1, 2]]
+Depth: 4
+Parent: Operator: left
+[[7, ' ', 4], [6, 3, 5], [8, 1, 2]]
+Number of successors: 4
+Expanded Nodes 37
+-------------------------------
+Expanded: 
+State: Operator: down
+[[7, 5, 3], [8, 4, 2], [1, 6, ' ']]
+Depth: 8
+Parent: Operator: down
+[[7, 5, 3], [8, 4, ' '], [1, 6, 2]]
+Number of successors: 2
+Expanded Nodes 38
+-------------------------------
+Expanded: 
+State: Operator: left
+[[7, 3, 4], [' ', 6, 5], [8, 1, 2]]
+Depth: 5
+Parent: Operator: down
+[[7, 3, 4], [6, ' ', 5], [8, 1, 2]]
+Number of successors: 3
+Expanded Nodes 39
+-------------------------------
+Expanded: 
+State: Operator: up
+[[7, 4, ' '], [8, 6, 5], [1, 2, 3]]
+Depth: 6
+Parent: Operator: up
+[[7, 4, 5], [8, 6, ' '], [1, 2, 3]]
+Number of successors: 2
+Expanded Nodes 40
+-------------------------------
+Expanded: 
+State: Operator: down
+[[7, 3, 4], [8, 6, 5], [' ', 1, 2]]
+Depth: 6
+Parent: Operator: left
+[[7, 3, 4], [' ', 6, 5], [8, 1, 2]]
+Number of successors: 2
+Expanded Nodes 41
+-------------------------------
+Expanded: 
+State: Operator: left
+[[7, ' ', 4], [8, 6, 5], [1, 2, 3]]
+Depth: 7
+Parent: Operator: up
+[[7, 4, ' '], [8, 6, 5], [1, 2, 3]]
+Number of successors: 3
+Expanded Nodes 42
+-------------------------------
+Expanded: 
+State: Operator: up
+[[' ', 3, 4], [7, 6, 5], [8, 1, 2]]
+Depth: 6
+Parent: Operator: left
+[[7, 3, 4], [' ', 6, 5], [8, 1, 2]]
+Number of successors: 2
+Expanded Nodes 43
+-------------------------------
+Expanded: 
+State: Operator: up
+[[7, 4, 5], [6, 1, ' '], [8, 2, 3]]
+Depth: 3
+Parent: Operator: right
+[[7, 4, 5], [6, 1, 3], [8, 2, ' ']]
+Number of successors: 3
+Expanded Nodes 44
+-------------------------------
+Expanded: 
+State: Operator: left
+[[7, 4, 5], [6, 1, 3], [' ', 8, 2]]
+Depth: 2
+Parent: Operator: down
+[[7, 4, 5], [6, 1, 3], [8, ' ', 2]]
+Number of successors: 2
+Expanded Nodes 45
+-------------------------------
+Expanded: 
+State: Operator: up
+[[' ', 4, 5], [7, 8, 3], [1, 6, 2]]
+Depth: 6
+Parent: Operator: left
+[[7, 4, 5], [' ', 8, 3], [1, 6, 2]]
+Number of successors: 2
+Expanded Nodes 46
+-------------------------------
+Expanded: 
+State: Operator: up
+[[7, 4, 5], [' ', 1, 3], [6, 8, 2]]
+Depth: 3
+Parent: Operator: left
+[[7, 4, 5], [6, 1, 3], [' ', 8, 2]]
+Number of successors: 3
+Expanded Nodes 47
+-------------------------------
+Expanded: 
+State: Operator: up
+[[7, ' ', 3], [8, 5, 4], [1, 6, 2]]
+Depth: 9
+Parent: Operator: up
+[[7, 5, 3], [8, ' ', 4], [1, 6, 2]]
+Number of successors: 3
+Expanded Nodes 48
+-------------------------------
+Expanded: 
+State: Operator: right
+[[7, 4, 5], [1, ' ', 3], [6, 8, 2]]
+Depth: 4
+Parent: Operator: up
+[[7, 4, 5], [' ', 1, 3], [6, 8, 2]]
+Number of successors: 4
+Expanded Nodes 49
+-------------------------------
+Expanded: 
+State: Operator: down
+[[7, 5, 3], [6, 4, 2], [8, 1, ' ']]
+Depth: 4
+Parent: Operator: down
+[[7, 5, 3], [6, 4, ' '], [8, 1, 2]]
+Number of successors: 2
+Expanded Nodes 50
+-------------------------------
+Expanded: 
+State: Operator: down
+[[7, 3, 4], [6, 1, 5], [8, ' ', 2]]
+Depth: 5
+Parent: Operator: down
+[[7, 3, 4], [6, ' ', 5], [8, 1, 2]]
+Number of successors: 3
+Expanded Nodes 51
+-------------------------------
+Expanded: 
+State: Operator: right
+[[4, ' ', 5], [7, 6, 3], [8, 1, 2]]
+Depth: 3
+Parent: Operator: up
+[[' ', 4, 5], [7, 6, 3], [8, 1, 2]]
+Number of successors: 3
+Expanded Nodes 52
+-------------------------------
+Expanded: 
+State: Operator: right
+[[7, 3, 4], [6, 1, 5], [8, 2, ' ']]
+Depth: 6
+Parent: Operator: down
+[[7, 3, 4], [6, 1, 5], [8, ' ', 2]]
+Number of successors: 2
+Expanded Nodes 53
+-------------------------------
+Expanded: 
+State: Operator: up
+[[7, ' ', 3], [6, 5, 4], [8, 1, 2]]
+Depth: 5
+Parent: Operator: left
+[[7, 5, 3], [6, ' ', 4], [8, 1, 2]]
+Number of successors: 3
+Expanded Nodes 54
+-------------------------------
+Expanded: 
+State: Operator: up
+[[7, 3, 4], [6, 1, ' '], [8, 2, 5]]
+Depth: 7
+Parent: Operator: right
+[[7, 3, 4], [6, 1, 5], [8, 2, ' ']]
+Number of successors: 3
+Expanded Nodes 55
+-------------------------------
+Expanded: 
+State: Operator: up
+[[7, 4, ' '], [6, 1, 5], [8, 2, 3]]
+Depth: 4
+Parent: Operator: up
+[[7, 4, 5], [6, 1, ' '], [8, 2, 3]]
+Number of successors: 2
+Expanded Nodes 56
+-------------------------------
+Expanded: 
+State: Operator: up
+[[7, 3, ' '], [6, 1, 4], [8, 2, 5]]
+Depth: 8
+Parent: Operator: up
+[[7, 3, 4], [6, 1, ' '], [8, 2, 5]]
+Number of successors: 2
+Expanded Nodes 57
+-------------------------------
+Expanded: 
+State: Operator: left
+[[7, ' ', 4], [6, 1, 5], [8, 2, 3]]
+Depth: 5
+Parent: Operator: up
+[[7, 4, ' '], [6, 1, 5], [8, 2, 3]]
+Number of successors: 3
+Expanded Nodes 58
+-------------------------------
+Expanded: 
+State: Operator: left
+[[7, ' ', 3], [6, 1, 4], [8, 2, 5]]
+Depth: 9
+Parent: Operator: up
+[[7, 3, ' '], [6, 1, 4], [8, 2, 5]]
+Number of successors: 3
+Expanded Nodes 59
+-------------------------------
+Expanded: 
+State: Operator: down
+[[7, 1, 4], [6, ' ', 5], [8, 2, 3]]
+Depth: 6
+Parent: Operator: left
+[[7, ' ', 4], [6, 1, 5], [8, 2, 3]]
+Number of successors: 4
+Expanded Nodes 60
+-------------------------------
+Expanded: 
+State: Operator: down
+[[7, 1, 3], [6, ' ', 4], [8, 2, 5]]
+Depth: 10
+Parent: Operator: left
+[[7, ' ', 3], [6, 1, 4], [8, 2, 5]]
+Number of successors: 4
+Expanded Nodes 61
+-------------------------------
+Expanded: 
+State: Operator: down
+[[7, 1, 4], [6, 2, 5], [8, ' ', 3]]
+Depth: 7
+Parent: Operator: down
+[[7, 1, 4], [6, ' ', 5], [8, 2, 3]]
+Number of successors: 3
+Expanded Nodes 62
+-------------------------------
+Expanded: 
+State: Operator: left
+[[7, 1, 4], [' ', 6, 5], [8, 2, 3]]
+Depth: 7
+Parent: Operator: down
+[[7, 1, 4], [6, ' ', 5], [8, 2, 3]]
+Number of successors: 3
+Expanded Nodes 63
+-------------------------------
+Expanded: 
+State: Operator: down
+[[7, 1, 3], [6, 2, 4], [8, ' ', 5]]
+Depth: 11
+Parent: Operator: down
+[[7, 1, 3], [6, ' ', 4], [8, 2, 5]]
+Number of successors: 3
+Expanded Nodes 64
+-------------------------------
+Expanded: 
+State: Operator: left
+[[7, 1, 3], [' ', 6, 4], [8, 2, 5]]
+Depth: 11
+Parent: Operator: down
+[[7, 1, 3], [6, ' ', 4], [8, 2, 5]]
+Number of successors: 3
+Expanded Nodes 65
+-------------------------------
+Expanded: 
+State: Operator: up
+[[' ', 1, 4], [7, 6, 5], [8, 2, 3]]
+Depth: 8
+Parent: Operator: left
+[[7, 1, 4], [' ', 6, 5], [8, 2, 3]]
+Number of successors: 2
+Expanded Nodes 66
+-------------------------------
+Expanded: 
+State: Operator: down
+[[7, 1, 4], [8, 6, 5], [' ', 2, 3]]
+Depth: 8
+Parent: Operator: left
+[[7, 1, 4], [' ', 6, 5], [8, 2, 3]]
+Number of successors: 2
+Expanded Nodes 67
+-------------------------------
+Expanded: 
+State: Operator: up
+[[' ', 1, 3], [7, 6, 4], [8, 2, 5]]
+Depth: 12
+Parent: Operator: left
+[[7, 1, 3], [' ', 6, 4], [8, 2, 5]]
+Number of successors: 2
+Expanded Nodes 68
+-------------------------------
+Expanded: 
+State: Operator: down
+[[7, 1, 3], [8, 6, 4], [' ', 2, 5]]
+Depth: 12
+Parent: Operator: left
+[[7, 1, 3], [' ', 6, 4], [8, 2, 5]]
+Number of successors: 2
+Expanded Nodes 69
+-------------------------------
+Expanded: 
+State: Operator: right
+[[1, ' ', 4], [7, 6, 5], [8, 2, 3]]
+Depth: 9
+Parent: Operator: up
+[[' ', 1, 4], [7, 6, 5], [8, 2, 3]]
+Number of successors: 3
+Expanded Nodes 70
+-------------------------------
+Expanded: 
+State: Operator: right
+[[1, ' ', 3], [7, 6, 4], [8, 2, 5]]
+Depth: 13
+Parent: Operator: up
+[[' ', 1, 3], [7, 6, 4], [8, 2, 5]]
+Number of successors: 3
+Expanded Nodes 71
+-------------------------------
+Expanded: 
+State: Operator: up
+[[' ', 4, 5], [7, 1, 3], [6, 8, 2]]
+Depth: 4
+Parent: Operator: up
+[[7, 4, 5], [' ', 1, 3], [6, 8, 2]]
+Number of successors: 2
+Expanded Nodes 72
+-------------------------------
+Expanded: 
+State: Operator: down
+[[7, 5, 3], [6, 1, 4], [8, ' ', 2]]
+Depth: 5
+Parent: Operator: left
+[[7, 5, 3], [6, ' ', 4], [8, 1, 2]]
+Number of successors: 3
+Expanded Nodes 73
+-------------------------------
+Expanded: 
+State: Operator: up
+[[7, ' ', 5], [1, 4, 3], [6, 8, 2]]
+Depth: 5
+Parent: Operator: right
+[[7, 4, 5], [1, ' ', 3], [6, 8, 2]]
+Number of successors: 3
+Expanded Nodes 74
+-------------------------------
+Expanded: 
+State: Operator: right
+[[7, 5, 3], [6, 1, 4], [8, 2, ' ']]
+Depth: 6
+Parent: Operator: down
+[[7, 5, 3], [6, 1, 4], [8, ' ', 2]]
+Number of successors: 2
+Expanded Nodes 75
+-------------------------------
+Expanded: 
+State: Operator: left
+[[' ', 7, 5], [1, 4, 3], [6, 8, 2]]
+Depth: 6
+Parent: Operator: up
+[[7, ' ', 5], [1, 4, 3], [6, 8, 2]]
+Number of successors: 2
+Expanded Nodes 76
+-------------------------------
+Expanded: 
+State: Operator: up
+[[7, 5, 3], [6, 1, ' '], [8, 2, 4]]
+Depth: 7
+Parent: Operator: right
+[[7, 5, 3], [6, 1, 4], [8, 2, ' ']]
+Number of successors: 3
+Expanded Nodes 77
+-------------------------------
+Expanded: 
+State: Operator: down
+[[1, 7, 5], [' ', 4, 3], [6, 8, 2]]
+Depth: 7
+Parent: Operator: left
+[[' ', 7, 5], [1, 4, 3], [6, 8, 2]]
+Number of successors: 3
+Expanded Nodes 78
+-------------------------------
+Expanded: 
+State: Operator: right
+[[7, 1, 3], [8, 6, 4], [2, ' ', 5]]
+Depth: 13
+Parent: Operator: down
+[[7, 1, 3], [8, 6, 4], [' ', 2, 5]]
+Number of successors: 3
+Expanded Nodes 79
+-------------------------------
+Expanded: 
+State: Operator: left
+[[' ', 7, 3], [6, 1, 4], [8, 2, 5]]
+Depth: 10
+Parent: Operator: left
+[[7, ' ', 3], [6, 1, 4], [8, 2, 5]]
+Number of successors: 2
+Expanded Nodes 80
+-------------------------------
+Expanded: 
+State: Operator: left
+[[7, 3, 4], [6, 1, 5], [' ', 8, 2]]
+Depth: 6
+Parent: Operator: down
+[[7, 3, 4], [6, 1, 5], [8, ' ', 2]]
+Number of successors: 2
+Expanded Nodes 81
+-------------------------------
+Expanded: 
+State: Operator: down
+[[8, 7, 5], [' ', 4, 3], [1, 6, 2]]
+Depth: 7
+Parent: Operator: left
+[[' ', 7, 5], [8, 4, 3], [1, 6, 2]]
+Number of successors: 3
+Expanded Nodes 82
+-------------------------------
+Expanded: 
+State: Operator: up
+[[7, 3, 4], [' ', 1, 5], [6, 8, 2]]
+Depth: 7
+Parent: Operator: left
+[[7, 3, 4], [6, 1, 5], [' ', 8, 2]]
+Number of successors: 3
+Expanded Nodes 83
+-------------------------------
+Expanded: 
+State: Operator: down
+[[8, 7, 5], [1, 4, 3], [' ', 6, 2]]
+Depth: 8
+Parent: Operator: down
+[[8, 7, 5], [' ', 4, 3], [1, 6, 2]]
+Number of successors: 2
+Expanded Nodes 84
+-------------------------------
+Expanded: 
+State: Operator: right
+[[7, 3, 4], [1, ' ', 5], [6, 8, 2]]
+Depth: 8
+Parent: Operator: up
+[[7, 3, 4], [' ', 1, 5], [6, 8, 2]]
+Number of successors: 4
+Expanded Nodes 85
+-------------------------------
+Expanded: 
+State: Operator: right
+[[7, 4, 5], [1, 8, 3], [6, ' ', 2]]
+Depth: 7
+Parent: Operator: down
+[[7, 4, 5], [1, 8, 3], [' ', 6, 2]]
+Number of successors: 3
+Expanded Nodes 86
+-------------------------------
+Expanded: 
+State: Operator: down
+[[7, 3, 4], [1, 8, 5], [6, ' ', 2]]
+Depth: 9
+Parent: Operator: right
+[[7, 3, 4], [1, ' ', 5], [6, 8, 2]]
+Number of successors: 3
+Expanded Nodes 87
+-------------------------------
+Expanded: 
+State: Operator: right
+[[7, 4, 5], [1, 8, 3], [6, 2, ' ']]
+Depth: 8
+Parent: Operator: right
+[[7, 4, 5], [1, 8, 3], [6, ' ', 2]]
+Number of successors: 2
+Expanded Nodes 88
+-------------------------------
+Expanded: 
+State: Operator: left
+[[7, 3, 4], [1, 8, 5], [' ', 6, 2]]
+Depth: 10
+Parent: Operator: down
+[[7, 3, 4], [1, 8, 5], [6, ' ', 2]]
+Number of successors: 2
+Expanded Nodes 89
+-------------------------------
+Expanded: 
+State: Operator: right
+[[4, 5, ' '], [7, 6, 3], [8, 1, 2]]
+Depth: 4
+Parent: Operator: right
+[[4, ' ', 5], [7, 6, 3], [8, 1, 2]]
+Number of successors: 2
+Expanded Nodes 90
+-------------------------------
+Expanded: 
+State: Operator: right
+[[7, 3, 4], [1, 8, 5], [6, 2, ' ']]
+Depth: 10
+Parent: Operator: down
+[[7, 3, 4], [1, 8, 5], [6, ' ', 2]]
+Number of successors: 2
+Expanded Nodes 91
+-------------------------------
+Expanded: 
+State: Operator: down
+[[4, 5, 3], [7, 6, ' '], [8, 1, 2]]
+Depth: 5
+Parent: Operator: right
+[[4, 5, ' '], [7, 6, 3], [8, 1, 2]]
+Number of successors: 3
+Expanded Nodes 92
+-------------------------------
+Expanded: 
+State: Operator: up
+[[7, 3, 4], [1, 8, ' '], [6, 2, 5]]
+Depth: 11
+Parent: Operator: right
+[[7, 3, 4], [1, 8, 5], [6, 2, ' ']]
+Number of successors: 3
+Expanded Nodes 93
+-------------------------------
+Expanded: 
+State: Operator: left
+[[7, 5, 3], [8, 4, 2], [1, ' ', 6]]
+Depth: 9
+Parent: Operator: down
+[[7, 5, 3], [8, 4, 2], [1, 6, ' ']]
+Number of successors: 3
+Expanded Nodes 94
+-------------------------------
+Expanded: 
+State: Operator: right
+[[7, 3, ' '], [6, 5, 4], [8, 1, 2]]
+Depth: 6
+Parent: Operator: up
+[[7, ' ', 3], [6, 5, 4], [8, 1, 2]]
+Number of successors: 2
+Expanded Nodes 95
+-------------------------------
+Expanded: 
+State: Operator: left
+[[7, 4, 5], [6, 3, 2], [8, ' ', 1]]
+Depth: 3
+Parent: Operator: down
+[[7, 4, 5], [6, 3, 2], [8, 1, ' ']]
+Number of successors: 3
+Expanded Nodes 96
+-------------------------------
+Expanded: 
+State: Operator: left
+[[' ', 7, 4], [6, 1, 5], [8, 2, 3]]
+Depth: 6
+Parent: Operator: left
+[[7, ' ', 4], [6, 1, 5], [8, 2, 3]]
+Number of successors: 2
+Expanded Nodes 97
+-------------------------------
+Expanded: 
+State: Operator: left
+[[' ', 7, 4], [8, 3, 5], [1, 6, 2]]
+Depth: 8
+Parent: Operator: left
+[[7, ' ', 4], [8, 3, 5], [1, 6, 2]]
+Number of successors: 2
+Expanded Nodes 98
+-------------------------------
+Expanded: 
+State: Operator: left
+[[7, 4, 5], [8, ' ', 6], [1, 2, 3]]
+Depth: 6
+Parent: Operator: up
+[[7, 4, 5], [8, 6, ' '], [1, 2, 3]]
+Number of successors: 4
+Expanded Nodes 99
+-------------------------------
+Expanded: 
+State: Operator: left
+[[7, 3, 4], [6, ' ', 1], [8, 2, 5]]
+Depth: 8
+Parent: Operator: up
+[[7, 3, 4], [6, 1, ' '], [8, 2, 5]]
+Number of successors: 4
+Expanded Nodes 100
+-------------------------------
+Expanded: 
+State: Operator: up
+[[7, 5, 3], [8, 6, ' '], [1, 2, 4]]
+Depth: 9
+Parent: Operator: right
+[[7, 5, 3], [8, 6, 4], [1, 2, ' ']]
+Number of successors: 3
+Expanded Nodes 101
+-------------------------------
+Expanded: 
+State: Operator: right
+[[7, 1, 4], [6, 5, ' '], [8, 2, 3]]
+Depth: 7
+Parent: Operator: down
+[[7, 1, 4], [6, ' ', 5], [8, 2, 3]]
+Number of successors: 3
+Expanded Nodes 102
+-------------------------------
+Expanded: 
+State: Operator: left
+[[7, 4, 5], [8, 3, 2], [1, ' ', 6]]
+Depth: 7
+Parent: Operator: down
+[[7, 4, 5], [8, 3, 2], [1, 6, ' ']]
+Number of successors: 3
+Expanded Nodes 103
+-------------------------------
+Expanded: 
+State: Operator: left
+[[7, 3, 4], [' ', 6, 1], [8, 2, 5]]
+Depth: 9
+Parent: Operator: left
+[[7, 3, 4], [6, ' ', 1], [8, 2, 5]]
+Number of successors: 3
+Expanded Nodes 104
+-------------------------------
+Expanded: 
+State: Operator: up
+[[7, 1, ' '], [6, 5, 4], [8, 2, 3]]
+Depth: 8
+Parent: Operator: right
+[[7, 1, 4], [6, 5, ' '], [8, 2, 3]]
+Number of successors: 2
+Expanded Nodes 105
+-------------------------------
+Expanded: 
+State: Operator: down
+[[7, 1, 4], [6, 5, 3], [8, 2, ' ']]
+Depth: 8
+Parent: Operator: right
+[[7, 1, 4], [6, 5, ' '], [8, 2, 3]]
+Number of successors: 2
+Expanded Nodes 106
+-------------------------------
+Expanded: 
+State: Operator: up
+[[' ', 3, 4], [7, 6, 1], [8, 2, 5]]
+Depth: 10
+Parent: Operator: left
+[[7, 3, 4], [' ', 6, 1], [8, 2, 5]]
+Number of successors: 2
+Expanded Nodes 107
+-------------------------------
+Expanded: 
+State: Operator: down
+[[7, 3, 4], [8, 6, 1], [' ', 2, 5]]
+Depth: 10
+Parent: Operator: left
+[[7, 3, 4], [' ', 6, 1], [8, 2, 5]]
+Number of successors: 2
+Expanded Nodes 108
+-------------------------------
+Expanded: 
+State: Operator: down
+[[7, 3, 4], [8, 6, 5], [1, ' ', 2]]
+Depth: 9
+Parent: Operator: down
+[[7, 3, 4], [8, ' ', 5], [1, 6, 2]]
+Number of successors: 3
+Expanded Nodes 109
+-------------------------------
+Expanded: 
+State: Operator: left
+[[7, 1, 4], [6, 2, 5], [' ', 8, 3]]
+Depth: 8
+Parent: Operator: down
+[[7, 1, 4], [6, 2, 5], [8, ' ', 3]]
+Number of successors: 2
+Expanded Nodes 110
+-------------------------------
+Expanded: 
+State: Operator: left
+[[7, 5, 3], [' ', 8, 4], [1, 6, 2]]
+Depth: 9
+Parent: Operator: up
+[[7, 5, 3], [8, ' ', 4], [1, 6, 2]]
+Number of successors: 3
+Expanded Nodes 111
+-------------------------------
+Expanded: 
+State: Operator: right
+[[7, 3, 4], [8, 6, 5], [1, 2, ' ']]
+Depth: 10
+Parent: Operator: down
+[[7, 3, 4], [8, 6, 5], [1, ' ', 2]]
+Number of successors: 2
+Expanded Nodes 112
+-------------------------------
+Expanded: 
+State: Operator: up
+[[7, 1, 4], [' ', 2, 5], [6, 8, 3]]
+Depth: 9
+Parent: Operator: left
+[[7, 1, 4], [6, 2, 5], [' ', 8, 3]]
+Number of successors: 3
+Expanded Nodes 113
+-------------------------------
+Expanded: 
+State: Operator: up
+[[' ', 5, 3], [7, 8, 4], [1, 6, 2]]
+Depth: 10
+Parent: Operator: left
+[[7, 5, 3], [' ', 8, 4], [1, 6, 2]]
+Number of successors: 2
+Expanded Nodes 114
+-------------------------------
+Expanded: 
+State: Operator: down
+[[7, 5, 3], [1, 8, 4], [' ', 6, 2]]
+Depth: 10
+Parent: Operator: left
+[[7, 5, 3], [' ', 8, 4], [1, 6, 2]]
+Number of successors: 2
+Expanded Nodes 115
+-------------------------------
+Expanded: 
+State: Operator: up
+[[7, 3, 4], [8, 6, ' '], [1, 2, 5]]
+Depth: 11
+Parent: Operator: right
+[[7, 3, 4], [8, 6, 5], [1, 2, ' ']]
+Number of successors: 3
+Expanded Nodes 116
+-------------------------------
+Expanded: 
+State: Operator: up
+[[' ', 1, 4], [7, 2, 5], [6, 8, 3]]
+Depth: 10
+Parent: Operator: up
+[[7, 1, 4], [' ', 2, 5], [6, 8, 3]]
+Number of successors: 2
+Expanded Nodes 117
+-------------------------------
+Expanded: 
+State: Operator: right
+[[7, 1, 3], [6, 4, ' '], [8, 2, 5]]
+Depth: 11
+Parent: Operator: down
+[[7, 1, 3], [6, ' ', 4], [8, 2, 5]]
+Number of successors: 3
+Expanded Nodes 118
+-------------------------------
+Expanded: 
+State: Operator: up
+[[7, 3, ' '], [8, 6, 4], [1, 2, 5]]
+Depth: 12
+Parent: Operator: up
+[[7, 3, 4], [8, 6, ' '], [1, 2, 5]]
+Number of successors: 2
+Expanded Nodes 119
+-------------------------------
+Expanded: 
+State: Operator: right
+[[1, ' ', 4], [7, 2, 5], [6, 8, 3]]
+Depth: 11
+Parent: Operator: up
+[[' ', 1, 4], [7, 2, 5], [6, 8, 3]]
+Number of successors: 3
+Expanded Nodes 120
+-------------------------------
+Expanded: 
+State: Operator: right
+[[5, ' ', 3], [7, 6, 4], [8, 1, 2]]
+Depth: 7
+Parent: Operator: up
+[[' ', 5, 3], [7, 6, 4], [8, 1, 2]]
+Number of successors: 3
+Expanded Nodes 121
+-------------------------------
+Expanded: 
+State: Operator: left
+[[7, ' ', 3], [8, 6, 4], [1, 2, 5]]
+Depth: 13
+Parent: Operator: up
+[[7, 3, ' '], [8, 6, 4], [1, 2, 5]]
+Number of successors: 3
+Expanded Nodes 122
+-------------------------------
+Expanded: 
+State: Operator: down
+[[1, 2, 4], [7, ' ', 5], [6, 8, 3]]
+Depth: 12
+Parent: Operator: right
+[[1, ' ', 4], [7, 2, 5], [6, 8, 3]]
+Number of successors: 4
+Expanded Nodes 123
+-------------------------------
+Expanded: 
+State: Operator: left
+[[' ', 7, 4], [6, 3, 5], [8, 1, 2]]
+Depth: 4
+Parent: Operator: left
+[[7, ' ', 4], [6, 3, 5], [8, 1, 2]]
+Number of successors: 2
+Expanded Nodes 124
+-------------------------------
+Expanded: 
+State: Operator: right
+[[7, 1, 4], [6, 2, 5], [8, 3, ' ']]
+Depth: 8
+Parent: Operator: down
+[[7, 1, 4], [6, 2, 5], [8, ' ', 3]]
+Number of successors: 2
+Expanded Nodes 125
+-------------------------------
+Expanded: 
+State: Operator: down
+[[1, 2, 4], [7, 8, 5], [6, ' ', 3]]
+Depth: 13
+Parent: Operator: down
+[[1, 2, 4], [7, ' ', 5], [6, 8, 3]]
+Number of successors: 3
+Expanded Nodes 126
+-------------------------------
+Expanded: 
+State: Operator: down
+[[6, 7, 5], [' ', 4, 3], [8, 1, 2]]
+Depth: 3
+Parent: Operator: left
+[[' ', 7, 5], [6, 4, 3], [8, 1, 2]]
+Number of successors: 3
+Expanded Nodes 127
+-------------------------------
+Expanded: 
+State: Operator: up
+[[7, 1, 4], [6, 2, ' '], [8, 3, 5]]
+Depth: 9
+Parent: Operator: right
+[[7, 1, 4], [6, 2, 5], [8, 3, ' ']]
+Number of successors: 3
+Expanded Nodes 128
+-------------------------------
+Expanded: 
+State: Operator: left
+[[1, 2, 4], [7, 8, 5], [' ', 6, 3]]
+Depth: 14
+Parent: Operator: down
+[[1, 2, 4], [7, 8, 5], [6, ' ', 3]]
+Number of successors: 2
+Expanded Nodes 129
+-------------------------------
+Expanded: 
+State: Operator: down
+[[6, 7, 5], [8, 4, 3], [' ', 1, 2]]
+Depth: 4
+Parent: Operator: down
+[[6, 7, 5], [' ', 4, 3], [8, 1, 2]]
+Number of successors: 2
+Expanded Nodes 130
+-------------------------------
+Expanded: 
+State: Operator: up
+[[7, 1, ' '], [6, 2, 4], [8, 3, 5]]
+Depth: 10
+Parent: Operator: up
+[[7, 1, 4], [6, 2, ' '], [8, 3, 5]]
+Number of successors: 2
+Expanded Nodes 131
+-------------------------------
+Expanded: 
+State: Operator: right
+[[7, 1, 4], [8, 6, 5], [2, ' ', 3]]
+Depth: 9
+Parent: Operator: down
+[[7, 1, 4], [8, 6, 5], [' ', 2, 3]]
+Number of successors: 3
+Expanded Nodes 132
+-------------------------------
+Expanded: 
+State: Operator: up
+[[1, 2, 4], [' ', 8, 5], [7, 6, 3]]
+Depth: 15
+Parent: Operator: left
+[[1, 2, 4], [7, 8, 5], [' ', 6, 3]]
+Number of successors: 3
+Expanded Nodes 133
+-------------------------------
+Expanded: 
+State: Operator: right
+[[6, 7, 5], [8, 4, 3], [1, ' ', 2]]
+Depth: 5
+Parent: Operator: down
+[[6, 7, 5], [8, 4, 3], [' ', 1, 2]]
+Number of successors: 3
+Expanded Nodes 134
+-------------------------------
+Expanded: 
+State: Operator: right
+[[7, 3, 4], [8, 5, ' '], [1, 6, 2]]
+Depth: 9
+Parent: Operator: down
+[[7, 3, 4], [8, ' ', 5], [1, 6, 2]]
+Number of successors: 3
+Expanded Nodes 135
+-------------------------------
+Expanded: 
+State: Operator: up
+[[7, 1, 4], [8, ' ', 5], [2, 6, 3]]
+Depth: 10
+Parent: Operator: right
+[[7, 1, 4], [8, 6, 5], [2, ' ', 3]]
+Number of successors: 4
+Expanded Nodes 136
+-------------------------------
+Expanded: 
+State: Operator: right
+[[1, 2, 4], [8, ' ', 5], [7, 6, 3]]
+Depth: 16
+Parent: Operator: up
+[[1, 2, 4], [' ', 8, 5], [7, 6, 3]]
+Number of successors: 4
+Expanded Nodes 137
+-------------------------------
+Expanded: 
+State: Operator: right
+[[6, 7, 5], [8, 4, 3], [1, 2, ' ']]
+Depth: 6
+Parent: Operator: right
+[[6, 7, 5], [8, 4, 3], [1, ' ', 2]]
+Number of successors: 2
+Expanded Nodes 138
+-------------------------------
+Expanded: 
+State: Operator: down
+[[7, 3, 4], [8, 5, 2], [1, 6, ' ']]
+Depth: 10
+Parent: Operator: right
+[[7, 3, 4], [8, 5, ' '], [1, 6, 2]]
+Number of successors: 2
+Expanded Nodes 139
+-------------------------------
+Expanded: 
+State: Operator: right
+[[7, 1, 3], [6, 2, 4], [8, 5, ' ']]
+Depth: 12
+Parent: Operator: down
+[[7, 1, 3], [6, 2, 4], [8, ' ', 5]]
+Number of successors: 2
+Expanded Nodes 140
+-------------------------------
+Expanded: 
+State: Operator: left
+[[7, 3, 4], [' ', 8, 5], [1, 6, 2]]
+Depth: 9
+Parent: Operator: down
+[[7, 3, 4], [8, ' ', 5], [1, 6, 2]]
+Number of successors: 3
+Expanded Nodes 141
+-------------------------------
+Expanded: 
+State: Operator: left
+[[7, 1, 3], [6, 2, 4], [' ', 8, 5]]
+Depth: 12
+Parent: Operator: down
+[[7, 1, 3], [6, 2, 4], [8, ' ', 5]]
+Number of successors: 2
+Expanded Nodes 142
+-------------------------------
+Expanded: 
+State: Operator: right
+[[1, 4, ' '], [7, 6, 5], [8, 2, 3]]
+Depth: 10
+Parent: Operator: right
+[[1, ' ', 4], [7, 6, 5], [8, 2, 3]]
+Number of successors: 2
+Expanded Nodes 143
+-------------------------------
+Expanded: 
+State: Operator: right
+[[1, 3, ' '], [7, 6, 4], [8, 2, 5]]
+Depth: 14
+Parent: Operator: right
+[[1, ' ', 3], [7, 6, 4], [8, 2, 5]]
+Number of successors: 2
+Expanded Nodes 144
+-------------------------------
+Expanded: 
+State: Operator: up
+[[' ', 3, 4], [7, 8, 5], [1, 6, 2]]
+Depth: 10
+Parent: Operator: left
+[[7, 3, 4], [' ', 8, 5], [1, 6, 2]]
+Number of successors: 2
+Expanded Nodes 145
+-------------------------------
+Expanded: 
+State: Operator: up
+[[7, 1, 3], [' ', 2, 4], [6, 8, 5]]
+Depth: 13
+Parent: Operator: left
+[[7, 1, 3], [6, 2, 4], [' ', 8, 5]]
+Number of successors: 3
+Expanded Nodes 146
+-------------------------------
+Expanded: 
+State: Operator: left
+[[7, 5, 3], [6, 1, 4], [' ', 8, 2]]
+Depth: 6
+Parent: Operator: down
+[[7, 5, 3], [6, 1, 4], [8, ' ', 2]]
+Number of successors: 2
+Expanded Nodes 147
+-------------------------------
+Expanded: 
+State: Operator: up
+[[' ', 1, 3], [7, 2, 4], [6, 8, 5]]
+Depth: 14
+Parent: Operator: up
+[[7, 1, 3], [' ', 2, 4], [6, 8, 5]]
+Number of successors: 2
+Expanded Nodes 148
+-------------------------------
+Expanded: 
+State: Operator: up
+[[7, 5, 3], [' ', 1, 4], [6, 8, 2]]
+Depth: 7
+Parent: Operator: left
+[[7, 5, 3], [6, 1, 4], [' ', 8, 2]]
+Number of successors: 3
+Expanded Nodes 149
+-------------------------------
+Expanded: 
+State: Operator: right
+[[1, ' ', 3], [7, 2, 4], [6, 8, 5]]
+Depth: 15
+Parent: Operator: up
+[[' ', 1, 3], [7, 2, 4], [6, 8, 5]]
+Number of successors: 3
+Expanded Nodes 150
+-------------------------------
+Expanded: 
+State: Operator: up
+[[' ', 5, 3], [7, 1, 4], [6, 8, 2]]
+Depth: 8
+Parent: Operator: up
+[[7, 5, 3], [' ', 1, 4], [6, 8, 2]]
+Number of successors: 2
+Expanded Nodes 151
+-------------------------------
+Expanded: 
+State: Operator: right
+[[7, 5, 3], [1, ' ', 4], [6, 8, 2]]
+Depth: 8
+Parent: Operator: up
+[[7, 5, 3], [' ', 1, 4], [6, 8, 2]]
+Number of successors: 4
+Expanded Nodes 152
+-------------------------------
+Expanded: 
+State: Operator: down
+[[1, 2, 3], [7, ' ', 4], [6, 8, 5]]
+Depth: 16
+Parent: Operator: right
+[[1, ' ', 3], [7, 2, 4], [6, 8, 5]]
+Number of successors: 4
+Expanded Nodes 153
+-------------------------------
+Expanded: 
+State: Operator: up
+[[7, ' ', 3], [1, 5, 4], [6, 8, 2]]
+Depth: 9
+Parent: Operator: right
+[[7, 5, 3], [1, ' ', 4], [6, 8, 2]]
+Number of successors: 3
+Expanded Nodes 154
+-------------------------------
+Expanded: 
+State: Operator: down
+[[1, 2, 3], [7, 8, 4], [6, ' ', 5]]
+Depth: 17
+Parent: Operator: down
+[[1, 2, 3], [7, ' ', 4], [6, 8, 5]]
+Number of successors: 3
+Expanded Nodes 155
+-------------------------------
+Expanded: 
+State: Operator: right
+[[4, ' ', 5], [7, 1, 3], [6, 8, 2]]
+Depth: 5
+Parent: Operator: up
+[[' ', 4, 5], [7, 1, 3], [6, 8, 2]]
+Number of successors: 3
+Expanded Nodes 156
+-------------------------------
+Expanded: 
+State: Operator: left
+[[1, 2, 3], [7, 8, 4], [' ', 6, 5]]
+Depth: 18
+Parent: Operator: down
+[[1, 2, 3], [7, 8, 4], [6, ' ', 5]]
+Number of successors: 2
+Expanded Nodes 157
+-------------------------------
+Expanded: 
+State: Operator: left
+[[' ', 7, 3], [8, 5, 4], [1, 6, 2]]
+Depth: 10
+Parent: Operator: up
+[[7, ' ', 3], [8, 5, 4], [1, 6, 2]]
+Number of successors: 2
+Expanded Nodes 158
+-------------------------------
+Expanded: 
+State: Operator: right
+[[3, ' ', 4], [7, 6, 5], [8, 1, 2]]
+Depth: 7
+Parent: Operator: up
+[[' ', 3, 4], [7, 6, 5], [8, 1, 2]]
+Number of successors: 3
+Expanded Nodes 159
+-------------------------------
+Expanded: 
+State: Operator: left
+[[' ', 7, 4], [8, 6, 5], [1, 2, 3]]
+Depth: 8
+Parent: Operator: left
+[[7, ' ', 4], [8, 6, 5], [1, 2, 3]]
+Number of successors: 2
+Expanded Nodes 160
+-------------------------------
+Expanded: 
+State: Operator: right
+[[7, 5, ' '], [1, 4, 3], [6, 8, 2]]
+Depth: 6
+Parent: Operator: up
+[[7, ' ', 5], [1, 4, 3], [6, 8, 2]]
+Number of successors: 2
+Expanded Nodes 161
+-------------------------------
+Expanded: 
+State: Operator: down
+[[4, 1, 5], [7, ' ', 3], [6, 8, 2]]
+Depth: 6
+Parent: Operator: right
+[[4, ' ', 5], [7, 1, 3], [6, 8, 2]]
+Number of successors: 4
+Expanded Nodes 162
+-------------------------------
+Expanded: 
+State: Operator: up
+[[1, 2, 3], [' ', 8, 4], [7, 6, 5]]
+Depth: 19
+Parent: Operator: left
+[[1, 2, 3], [7, 8, 4], [' ', 6, 5]]
+Number of successors: 3
+Expanded Nodes 163
+-------------------------------
+Expanded: 
+State: Operator: right
+[[7, 3, 4], [6, 5, ' '], [8, 1, 2]]
+Depth: 5
+Parent: Operator: down
+[[7, 3, 4], [6, ' ', 5], [8, 1, 2]]
+Number of successors: 3
+Expanded Nodes 164
+-------------------------------
+Expanded: 
+State: Operator: right
+[[4, ' ', 5], [7, 8, 3], [1, 6, 2]]
+Depth: 7
+Parent: Operator: up
+[[' ', 4, 5], [7, 8, 3], [1, 6, 2]]
+Number of successors: 3
+Expanded Nodes 165
+-------------------------------
+Expanded: 
+State: Operator: down
+[[4, 1, 5], [7, 8, 3], [6, ' ', 2]]
+Depth: 7
+Parent: Operator: down
+[[4, 1, 5], [7, ' ', 3], [6, 8, 2]]
+Number of successors: 3
+Expanded Nodes 166
+-------------------------------
+[[7, 4, 5], [6, ' ', 3], [8, 1, 2]]
+Operator: right
+[[7, 4, 5], [6, 3, ' '], [8, 1, 2]]
+Operator: up
+[[7, 4, ' '], [6, 3, 5], [8, 1, 2]]
+Operator: left
+[[7, ' ', 4], [6, 3, 5], [8, 1, 2]]
+Operator: down
+[[7, 3, 4], [6, ' ', 5], [8, 1, 2]]
+Operator: down
+[[7, 3, 4], [6, 1, 5], [8, ' ', 2]]
+Operator: right
+[[7, 3, 4], [6, 1, 5], [8, 2, ' ']]
+Operator: up
+[[7, 3, 4], [6, 1, ' '], [8, 2, 5]]
+Operator: up
+[[7, 3, ' '], [6, 1, 4], [8, 2, 5]]
+Operator: left
+[[7, ' ', 3], [6, 1, 4], [8, 2, 5]]
+Operator: down
+[[7, 1, 3], [6, ' ', 4], [8, 2, 5]]
+Operator: down
+[[7, 1, 3], [6, 2, 4], [8, ' ', 5]]
+Operator: left
+[[7, 1, 3], [6, 2, 4], [' ', 8, 5]]
+Operator: up
+[[7, 1, 3], [' ', 2, 4], [6, 8, 5]]
+Operator: up
+[[' ', 1, 3], [7, 2, 4], [6, 8, 5]]
+Operator: right
+[[1, ' ', 3], [7, 2, 4], [6, 8, 5]]
+Operator: down
+[[1, 2, 3], [7, ' ', 4], [6, 8, 5]]
+Operator: down
+[[1, 2, 3], [7, 8, 4], [6, ' ', 5]]
+Operator: left
+[[1, 2, 3], [7, 8, 4], [' ', 6, 5]]
+Operator: up
+[[1, 2, 3], [' ', 8, 4], [7, 6, 5]]
+Operator: right
+[[1, 2, 3], [8, ' ', 4], [7, 6, 5]]
+Goal reached in 20 steps
+
+Process finished with exit code 0
