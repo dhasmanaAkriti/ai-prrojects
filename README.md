@@ -14,4 +14,8 @@ This chatbot was built using Python 3.8.1.
 
 Project 2 : This program solves the missionaries and cannibals problem by employing the state space search. 
 The improved search refines the search method so that no node is visited again. This helps make sure that no 
-state is repeated when we try to find the solution to the riddle. The solution ws found using Python 3.8.1. 
+state is repeated when we try to find the solution to the riddle. The solution finding AI was built using Python 3.8.1.
+
+
+Project 3 : This can solve the 8-star puzzle using the A* traversal algorithm. The same program can be used for for any puzzle
+of the size n^2 - 1. The steps and intermediate stages are printed out when the puzzle is solved.This AI was built using Python 3.8.1
