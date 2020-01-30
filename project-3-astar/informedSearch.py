@@ -3,7 +3,7 @@ from search import *
 
 class InformedProblemState(ProblemState):
     """"""
-    def heuristic(self, goalState) :
+    def heuristic(self, goalState):
         abstract()
 
 class InformedNode(Node):
@@ -46,7 +46,7 @@ class InformedSearch(Search):
                 successors = current.state.applyOperators()
                 for nextState in successors:
                     n = InformedNode(nextState, current, self.goalState, current.depth + 1)
-                    if nextState.dictkey() not in self.uniqueStates.keys() or self.uniqueStates[nextState.dictkey()] > n.priority():
+                    if nextState.dictkey() not in self.uniqueStates.keys():
                         self.q.enqueue(n)
                         self.uniqueStates[nextState.dictkey()] = n.priority()
                 if self.verbose:
