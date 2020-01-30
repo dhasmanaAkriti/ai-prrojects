@@ -45,7 +45,8 @@ class EightPuzzle(InformedProblemState):
         goalState_dict = self.utility2DtoDict(goalState.puzzle)
         for num in puz_dict:
             if num != " ":
-                moves_req = moves_req + abs(goalState_dict[num][0] - puz_dict[num][0]) + abs(goalState_dict[num][1] - puz_dict[num][1])
+                moves_req = moves_req + abs(goalState_dict[num][0] - puz_dict[num][0]) + \
+                            abs(goalState_dict[num][1] - puz_dict[num][1])
         return moves_req
 
     def tiles_out_of_place(self, goalState):
@@ -81,35 +82,46 @@ class EightPuzzle(InformedProblemState):
 
     def moveLeft(self):
         newList = deepcopy(self.puzzle)
-        newList[self.pos[0]][self.pos[1] - 1], \
-        newList[self.pos[0]][self.pos[1]] =  \
-            newList[self.pos[0]][self.pos[1]], \
-            newList[self.pos[0]][self.pos[1] - 1]
-        return EightPuzzle(newList, (self.pos[0], self.pos[1] - 1), self.heur, "left")
+        x_pos = self.pos[0]
+        y_pos = self.pos[1]
+        newList[x_pos][y_pos - 1], \
+        newList[x_pos][y_pos] =  \
+            newList[x_pos][y_pos], \
+            newList[x_pos][y_pos - 1]
+        return EightPuzzle(newList, (x_pos, y_pos - 1), self.heur, "left")
 
     def moveRight(self):
         newList = deepcopy(self.puzzle)
-        newList[self.pos[0]][self.pos[1] + 1], \
-        newList[self.pos[0]][self.pos[1]] = \
-            newList[self.pos[0]][self.pos[1]], \
-            newList[self.pos[0]][self.pos[1] + 1]
-        return EightPuzzle(newList, (self.pos[0], self.pos[1] + 1), self.heur, "right")
+        x_pos = self.pos[0]
+        y_pos = self.pos[1]
+        
+        newList[x_pos][y_pos + 1], \
+        newList[x_pos][y_pos] = \
+            newList[x_pos][y_pos], \
+            newList[x_pos][y_pos + 1]
+        return EightPuzzle(newList, (x_pos, y_pos + 1), self.heur, "right")
 
     def moveUp(self):
         newList = deepcopy(self.puzzle)
-        newList[self.pos[0] - 1][self.pos[1]], \
-        newList[self.pos[0]][self.pos[1]] = \
-            newList[self.pos[0]][self.pos[1]], \
-            newList[self.pos[0] - 1][self.pos[1]]
-        return EightPuzzle(newList, (self.pos[0] - 1, self.pos[1]), self.heur, "up")
+        x_pos = self.pos[0]
+        y_pos = self.pos[1]
+
+        newList[x_pos - 1][y_pos], \
+        newList[x_pos][y_pos] = \
+            newList[x_pos][y_pos], \
+            newList[x_pos - 1][y_pos]
+        return EightPuzzle(newList, (x_pos - 1, y_pos), self.heur, "up")
 
     def moveDown(self):
         newList = deepcopy(self.puzzle)
-        newList[self.pos[0] + 1][self.pos[1]], \
-        newList[self.pos[0]][self.pos[1]] = \
-            newList[self.pos[0]][self.pos[1]], \
-            newList[self.pos[0] + 1][self.pos[1]]
-        return EightPuzzle(newList, (self.pos[0] + 1, self.pos[1]), self.heur, "down")
+        x_pos = self.pos[0]
+        y_pos = self.pos[1]
+
+        newList[x_pos + 1][y_pos], \
+        newList[x_pos][y_pos] = \
+            newList[x_pos][y_pos], \
+            newList[x_pos + 1][y_pos]
+        return EightPuzzle(newList, (x_pos + 1, y_pos), self.heur, "down")
 
 
 
