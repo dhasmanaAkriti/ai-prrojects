@@ -1,0 +1,7 @@
+Informed Search: 40/40
+8-Puzzle: 40/40
+Testing: 20/20
+
+Total:100
+
+Notes: nice work!
