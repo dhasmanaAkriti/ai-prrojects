@@ -19,3 +19,7 @@ state is repeated when we try to find the solution to the riddle. The solution f
 
 Project 3 : This can solve the 8-star puzzle using the A* traversal algorithm. The same program can be used for for any puzzle
 of the size n^2 - 1. The steps and intermediate stages are printed out when the puzzle is solved.This AI was built using Python 3.8.1
+
+Project 4: This code uses minimax adversial search algorithm with alpha beta pruning and a static evaluator to play 
+the Hawaiin Checkers game of Konane. It uses thet static evaluator to return the value for every stage of the board.
+This search algorithm was built using Python 3.8.1  
