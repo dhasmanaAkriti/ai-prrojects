@@ -26,6 +26,7 @@ def timed_out(timeout):
             try:
                 result = f(*args, **kwargs)
             finally:
+
                 signal.signal(signal.SIGALRM, old)
             signal.alarm(0)
             return result

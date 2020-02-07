@@ -6,11 +6,12 @@ class MinimaxNode:
     Black always goes first and is considered the maximizer.
     White always goes second and is considered the minimizer.
     """
-    def __init__(self, state, operator, depth, player):
+    def __init__(self, state, operator, depth, player, score = 0):
         self.state = state
         self.operator = operator
         self.player = player
         self.depth = depth
+        self.score = score
 
 class MinimaxPlayer(Konane, Player):
 
@@ -47,10 +48,16 @@ class MinimaxPlayer(Konane, Player):
 	    Returns an estimate of the value of the state associated
 	    with the given node.
         """
-        # moves_me = len(self.generateMoves(node.state, node.player))
+        moves_me = len(self.generateMoves(node.state, node.player))
         moves_opponent = len(self.generateMoves(node.state, self.opponent(node.player)))
-        # return  moves_me - moves_opponent
-        return self.countSymbol(node.state, self.side) - self.countSymbol(node.state, self.opponent(self.side)) - moves_opponent
+        if moves_opponent == 0:
+            return 100
+        elif moves_me == 0:
+            return -100
+        else:
+            return moves_me - moves_opponent
+
+        #return self.countSymbol(node.state, self.side) - self.countSymbol(node.state, self.opponent(self.side)) - moves_opponent
 
 
 
@@ -70,7 +77,7 @@ class MinimaxPlayer(Konane, Player):
                 #print(moves)
                 #print(node.state)
                 successor_board = self.nextBoard(node.state, node.player, move)
-                successor = MinimaxNode(successor_board, move, new_depth, self.opponent(node.player))
+                successor = MinimaxNode(successor_board, move, new_depth, self.opponent(node.player), self.staticEval(node))
                 successors.append(successor)
             return successors
 
@@ -84,8 +91,8 @@ class MinimaxPlayer(Konane, Player):
         """
         successors = self.successors(node)
         if successors == [] or node.depth == self.limit:
-            #self.best_move = node.operator
-            return self.staticEval(node)
+            self.best_move = node.operator
+            return node.score
         elif node.player == self.side:
             best_score = -math.inf
             for s in successors:
@@ -111,4 +118,4 @@ if __name__ == '__main__':
     game = Konane(8)
     game.playNGames(100, MinimaxPlayer(8, 2), MinimaxPlayer(8, 1), False)
     game.playNGames(100, MinimaxPlayer(8, 6), SimplePlayer(8), False)
-    game.playNGames(100, MinimaxPlayer(8, 6), RandomPlayer(8), False)
+    #game.playNGames(100, MinimaxPlayer(8, 6), RandomPlayer(8), False)
