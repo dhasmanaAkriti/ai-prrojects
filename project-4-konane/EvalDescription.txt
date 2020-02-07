@@ -1,4 +1,5 @@
-the static eval uses the difference between the symbols for the current player and the opponent to assign a
+The static eval uses the difference between the symbols for the current player and the opponent to assign a
 value to the board. It further substracts the number of legal moves for the opponent from it.
 This would return 0 if the number of symbols are the same for both and no possible values for the opponents.
-This is the optimal condition.
+This is the optimal condition for the player to win. Any negative value is desirable for the player 
+and undesirable for the opponent. 
