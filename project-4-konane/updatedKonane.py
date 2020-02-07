@@ -274,7 +274,7 @@ class Konane:
                 log.write("Game over: " + p1.name + " loses.\n")
                 print( "Game over")
                 return 'W'
-            try: 
+            try:
                 self.makeMove('B', move)
             except KonaneError:
                 log.write("Game over: Invalid move by " + p1.name + "\n")
@@ -446,6 +446,3 @@ class HumanPlayer(Konane, Player):
             else:
                 print( "Invalid choice, try again.")
 
-if __name__ == '__main__':
-    game = Konane(8)
-    game.playNGames(2, RandomPlayer(8), SimplePlayer(8))
