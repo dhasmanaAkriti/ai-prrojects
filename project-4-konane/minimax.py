@@ -41,8 +41,8 @@ class MinimaxPlayer(Konane, Player):
         alpha = float("-inf")
         beta = float("inf")
         node = MinimaxNode(board, [], 0, self.side)
+        self.best_move = []
         self.alphaBetaMinimax(node, alpha, beta)
-        #print(self.best_move)
         return self.best_move
 
 
@@ -61,11 +61,6 @@ class MinimaxPlayer(Konane, Player):
         else:
             return moves_me - moves_opponent
 
-        #return self.countSymbol(node.state, self.side) - self.countSymbol(node.state, self.opponent(self.side)) - moves_opponent
-
-
-
-
     def successors(self, node):
         """
         Returns a list of the successor nodes for the given node.
@@ -77,9 +72,6 @@ class MinimaxPlayer(Konane, Player):
             return []
         else:
             for move in moves:
-                #print(move)
-                #print(moves)
-                #print(node.state)
                 successor_board = self.nextBoard(node.state, node.player, move)
                 successor = MinimaxNode(successor_board, move, new_depth,
                                         self.opponent(node.player))
@@ -96,25 +88,17 @@ class MinimaxPlayer(Konane, Player):
 	    Initialize alpha to -infinity and beta to +infinity.
         """
         successors = self.successors(node)
-        #print(node.score)
+
         if successors == [] or node.depth == self.limit:
             return node.score
-        elif node.depth == 0:
+        elif node.player == self.side:
             best_score = -math.inf
             for s in successors:
                 s_return = self.alphaBetaMinimax(s, alpha, beta)
                 if best_score < s_return:
                     best_score = s_return
-                    self.best_move = s.operator
-                if best_score >= beta:
-                    return best_score
-                else:
-                    alpha = max(alpha, best_score)
-            return best_score
-        elif node.player == self.side:
-            best_score = -math.inf
-            for s in successors:
-                best_score = max(best_score, self.alphaBetaMinimax(s, alpha, beta))
+                    if node.depth == 0:
+                        self.best_move = s.operator
                 if best_score >= beta:
                     return best_score
                 else:
@@ -132,6 +116,6 @@ class MinimaxPlayer(Konane, Player):
 
 if __name__ == '__main__':
     game = Konane(8)
-    # game.playNGames(10, MinimaxPlayer(8, 2), MinimaxPlayer(8, 1), False)
-    # game.playNGames(100, MinimaxPlayer(8, 6), SimplePlayer(8), False)
+    game.playNGames(10, MinimaxPlayer(4, 2), MinimaxPlayer(4, 1), False)
+    game.playNGames(10, MinimaxPlayer(8, 4), SimplePlayer(8), False)
     game.playNGames(100, MinimaxPlayer(8, 2), RandomPlayer(8), False)
