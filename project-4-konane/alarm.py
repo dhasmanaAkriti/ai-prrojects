@@ -21,14 +21,14 @@ def timed_out(timeout):
             raise TimedOutException()
 
         def new_f(*args, **kwargs):
-            old = signal.signal(signal.SIGALRM, handler)
-            signal.alarm(timeout)
+            #old = signal.signal(signal.SIGALRM, handler)
+            #signal.alarm(timeout)
             try:
                 result = f(*args, **kwargs)
             finally:
-
-                signal.signal(signal.SIGALRM, old)
-            signal.alarm(0)
+                pass
+                #signal.signal(signal.SIGALRM, old)
+            #signal.alarm(0)
             return result
 
         new_f.func_name = f.__name__
