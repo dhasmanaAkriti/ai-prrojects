@@ -26,9 +26,10 @@ class Genome:
         abstract()
 
 class BitGenome(Genome):
-    def __init__(self, length):
+    def __init__(self, length, r):
         self.length = length
         self.string = ""
+        self.rand = r
 
     def __str__(self):
         return self.string
@@ -36,21 +37,21 @@ class BitGenome(Genome):
     def fitness(self):
         return float(self.string.count("1"))
     def mutate(self, rate = 0.5):
-        child_genome = BitGenome(self.length)
+        child_genome = BitGenome(self.length, self.rand)
         child = copy.copy(self.get_genome())
         child_list = list(child)
         num, den = utilities.convert_rate_to_fraction(rate)
         for i in range(len(child_list)):
-            loc = random.randint(1, den+1)
+            loc = self.rand.randint(1, den+1)
             if loc <= num:
                 child_list[i] = utilities.flip(child_list[i])
         child_genome.initialize("".join(child_list))
         return child_genome
 
     def crossover(self, other):
-        child_genome1 = BitGenome(self.length)
-        child_genome2 = BitGenome(self.length)
-        crossover_point = random.randint(1, self.length)
+        child_genome1 = BitGenome(self.length, self.rand)
+        child_genome2 = BitGenome(self.length, self.rand)
+        crossover_point = self.rand.randint(1, self.length)
         child1 = self.get_genome()[0:crossover_point] + \
                 other.get_genome()[crossover_point:self.length]
         child2 = other.get_genome()[0:crossover_point] + \
@@ -68,41 +69,41 @@ class BitGenome(Genome):
     def initialize_r(self):
         my_string = ""
         for i in range(self.length):
-            my_string = my_string + random.choice(["0", "1"])
+            my_string = my_string + self.rand.choice(["0", "1"])
         self.string = my_string
 
 class BitGenome_GA_RR(BitGenome):
-    def initialize(self, length):
-        super().__init__(length)
+    def initialize(self, length, r):
+        super().__init__(length, r)
     def fitness(self):
-        initial_sum = 0
+        initial_sum = 1
         copy_of_the_first = copy.copy(self.string)
-        num_bit_strings = self.length / 8
-        for i  in range(num_bit_strings):
+        num_bit_strings = self.length // 8
+        for i in range(num_bit_strings):
             first = 0
             last = first + 8
             if copy_of_the_first[first:last] == "11111111":
                 initial_sum += 8
             first = last
             copy_of_the_first = copy_of_the_first[first:]
-        return initial_sum
+        return float(initial_sum)
 
     def mutate(self, rate = 0.5):
-        child_genome = BitGenome_HC(self.length)
+        child_genome = BitGenome(self.length, self.rand)
         child = copy.copy(self.get_genome())
         child_list = list(child)
         num, den = utilities.convert_rate_to_fraction(rate)
         for i in range(len(child_list)):
-            loc = random.randint(1, den+1)
+            loc = self.rand.randint(1, den+1)
             if loc <= num:
                 child_list[i] = utilities.flip(child_list[i])
         child_genome.initialize("".join(child_list))
         return child_genome
 
     def crossover(self, other):
-        child_genome1 = BitGenome_HC(self.length)
-        child_genome2 = BitGenome_HC(self.length)
-        crossover_point = random.randint(1, self.length)
+        child_genome1 = BitGenome(self.length, self.rand)
+        child_genome2 = BitGenome(self.length, self.rand)
+        crossover_point = self.rand.randint(1, self.length)
         child1 = self.get_genome()[0:crossover_point] + \
                 other.get_genome()[crossover_point:self.length]
         child2 = other.get_genome()[0:crossover_point] + \
@@ -125,11 +126,12 @@ class Population():
         abstract()
 
 class Pop_Bit_Genome_GA(Population):
-    def __init__(self, population_size, bit_length, population = [], gen = 0):
+    def __init__(self, population_size, bit_length, r,  population = [], gen = 0):
         self.pop_size = population_size
         self.bitlen = bit_length
         self.pop = population
         self.gen = gen
+        self.rand = r
 
     def __str__(self):
         to_return = "POPULATION: \n"
@@ -143,7 +145,7 @@ class Pop_Bit_Genome_GA(Population):
     def generate_first_pop(self):
         popul = []
         for i in range(self.pop_size):
-            gen = BitGenome(self.bitlen)
+            gen = BitGenome(self.bitlen, self.rand)
             gen.initialize_r()
             popul.append(gen)
         self.pop = popul
@@ -153,19 +155,19 @@ class Pop_Bit_Genome_GA(Population):
         next_gen = []
         num, dem = utilities.convert_rate_to_fraction(crossover_rate)
         while len(next_gen) != self.pop_size:
-            loc = random.randint(1, dem)
+            loc = self.rand.randint(1, dem)
             if loc <= num:
-                p1 = random.choice(x)
-                p2 = random.choice(x)
+                p1 = self.rand.choice(x)
+                p2 = self.rand.choice(x)
                 child = p1.crossover(p2)
                 next_gen.append(child[1].mutate(mutation_rate))
                 next_gen.append(child[0].mutate(mutation_rate))
             else:
-                p1 = random.choice(x)
-                p2 = random.choice(x)
+                p1 = self.rand.choice(x)
+                p2 = self.rand.choice(x)
                 next_gen.append(p1.mutate(mutation_rate))
                 next_gen.append(p2.mutate(mutation_rate))
-        population = Pop_Bit_Genome_GA(self.pop_size, self.bitlen, next_gen, self.gen + 1)
+        population = Pop_Bit_Genome_GA(self.pop_size, self.bitlen, self.rand, next_gen, self.gen + 1)
         return population
 
     def cull(self, size):
@@ -185,7 +187,7 @@ class Pop_Bit_Genome_GA(Population):
             new_l[i].append(accum_sum)
         culled_list = []
         for i in range(size):
-            R = random.random()
+            R = self.rand.random()
             not_found = True
             j = 0
             while not_found:
@@ -203,11 +205,12 @@ class Pop_Bit_Genome_GA(Population):
         return best
 
 class Pop_Bit_Genome_GA_RR(Population):
-    def __init__(self, population_size, bit_length, population = [], gen = 0):
+    def __init__(self, population_size, bit_length, r,  population = [], gen = 0):
         self.pop_size = population_size
         self.bitlen = bit_length
         self.pop = population
         self.gen = gen
+        self.rand = r
 
     def __str__(self):
         to_return = "POPULATION: \n"
@@ -221,7 +224,7 @@ class Pop_Bit_Genome_GA_RR(Population):
     def generate_first_pop(self):
         popul = []
         for i in range(self.pop_size):
-            gen = Pop_Bit_Genome_GA_RR(self.bitlen)
+            gen = BitGenome_GA_RR(self.bitlen, self.rand)
             gen.initialize_r()
             popul.append(gen)
         self.pop = popul
@@ -231,19 +234,19 @@ class Pop_Bit_Genome_GA_RR(Population):
         next_gen = []
         num, dem = utilities.convert_rate_to_fraction(crossover_rate)
         while len(next_gen) != self.pop_size:
-            loc = random.randint(1, dem)
+            loc = self.rand.randint(1, dem)
             if loc <= num:
-                p1 = random.choice(x)
-                p2 = random.choice(x)
+                p1 = self.rand.choice(x)
+                p2 = self.rand.choice(x)
                 child = p1.crossover(p2)
                 next_gen.append(child[1].mutate(mutation_rate))
                 next_gen.append(child[0].mutate(mutation_rate))
             else:
-                p1 = random.choice(x)
-                p2 = random.choice(x)
+                p1 = self.rand.choice(x)
+                p2 = self.rand.choice(x)
                 next_gen.append(p1.mutate(mutation_rate))
                 next_gen.append(p2.mutate(mutation_rate))
-        population = Pop_Bit_Genome_GA_RR(self.pop_size, self.bitlen, next_gen, self.gen + 1)
+        population = Pop_Bit_Genome_GA_RR(self.pop_size, self.bitlen, self.rand, next_gen, self.gen + 1)
         return population
 
     def cull(self, size):
@@ -263,7 +266,7 @@ class Pop_Bit_Genome_GA_RR(Population):
             new_l[i].append(accum_sum)
         culled_list = []
         for i in range(size):
-            R = random.random()
+            R = self.rand.random()
             not_found = True
             j = 0
             while not_found:
@@ -280,13 +283,13 @@ class Pop_Bit_Genome_GA_RR(Population):
                 best = self.pop[i]
         return best
 
-
 class Pop_Bit_Genome_HC(Population):
-    def __init__(self, population_size, bit_length, population=[], gen=0):
+    def __init__(self, population_size, bit_length, r, population=[], gen=0):
         self.pop_size = population_size
         self.bitlen = bit_length
         self.pop = population
         self.gen = gen
+        self.rand = r
 
     def __str__(self):
         to_return = "POPULATION: \n"
@@ -294,6 +297,8 @@ class Pop_Bit_Genome_HC(Population):
             to_return += str(i) + "\n"
         to_return += "\nSIZE : "
         to_return += str(self.pop_size)
+        to_return += "\nGEN : "
+        to_return += str(self.gen)
         to_return += "\n_______________________________________________________________________________________________\n"
         return to_return
     def generate_next_gen(self, mutation_rate):
@@ -301,12 +306,12 @@ class Pop_Bit_Genome_HC(Population):
         next_gen = []
         for i in range(self.pop_size):
             next_gen.append(x.mutate(mutation_rate))
-        population = Pop_Bit_Genome_HC(self.pop_size, self.bitlen, next_gen, self.gen + 1)
+        population = Pop_Bit_Genome_HC(self.pop_size, self.bitlen, self.rand, next_gen, self.gen + 1)
         return population
     def generate_first_pop(self):
         popul = []
         for i in range(self.pop_size):
-            gen = BitGenome(self.bitlen)
+            gen = BitGenome(self.bitlen, self.rand)
             gen.initialize_r()
             popul.append(gen)
         self.pop = popul
@@ -319,29 +324,45 @@ class Pop_Bit_Genome_HC(Population):
         return best
 
 def hill_climber(pop_size, bit_len, mutation_rate, seed):
-    # r = random.Random(seed)
-    start_pop = Pop_Bit_Genome_HC(pop_size, bit_len)
-    print(start_pop)
+    r = random.Random(seed)
+    # file = file.open("HillClimber" + run, "w+")
+    # file.writeline("RandomSeed," + str(seed))
+    # file.writeline("individual,fitness, ")
+    start_pop = Pop_Bit_Genome_HC(pop_size, bit_len, r)
     start_pop.generate_first_pop()
-    print(start_pop)
-    next = start_pop.generate_next_gen(mutation_rate)
-    print(next)
+    while int(start_pop.find_best().fitness()) != bit_len:
+        next = start_pop.generate_next_gen(mutation_rate)
+        start_pop = next
+    print(start_pop.gen)
+
+def GA_RR(pop_size, bit_len, crossover_rate, mutation_rate, seed):
+    r = random.Random(seed)
+    start_pop = Pop_Bit_Genome_GA_RR(pop_size, bit_len, r)
+    start_pop.generate_first_pop()
+    opt_string = "1"*bit_len
+    while str(start_pop.find_best()) != opt_string:
+        next = start_pop.generate_next_gen(crossover_rate, mutation_rate)
+        start_pop = next
+    print(start_pop.gen)
+
+def GA(pop_size, bit_len, crossover_rate, mutation_rate, seed):
+    r = random.Random()
+    start_pop = Pop_Bit_Genome_GA(pop_size, bit_len, r)
+    start_pop.generate_first_pop()
+    opt_string = "1" * bit_len
+    while str(start_pop.find_best()) != opt_string:
+        next = start_pop.generate_next_gen(crossover_rate, mutation_rate)
+        start_pop = next
+    print(start_pop.gen)
+
 
 if __name__ == "__main__":
-    # gen1 = BitGenome(6)
-    # gen1.initialize_r()
-    #
-    # gen2 = BitGenome(6)
-    # gen2.initialize_r()
-    #
-    # print(gen1)
-    # print(gen1.mutate(0.5))
-    #
-    # print(utilities.convert_rate_to_fraction(0.75))
-    #
-    # print(gen2)
-    # print(gen1.crossover(gen2))
-    hill_climber(4, 10, 0.5)
+    #hill_climber(64, 16, 0.7, 5)
+    GA_RR(64, 16, 0.7, 0.005, 5)
+    GA(64, 16, 0.7, 0.005, 5)
+
+
+
 
 
 
