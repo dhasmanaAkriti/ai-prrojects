@@ -1,4 +1,4 @@
-import random, copy, utilities
+import random, copy, utilities, math
 class Genome:
     """
     An interface class for a genome.
@@ -77,19 +77,27 @@ class BitGenome_GA_RR(BitGenome):
         super().__init__(length, r)
     def fitness(self):
         initial_sum = 1
-        copy_of_the_first = copy.copy(self.string)
-        num_bit_strings = self.length // 8
-        for i in range(num_bit_strings):
-            first = 0
-            last = first + 8
-            if copy_of_the_first[first:last] == "11111111":
-                initial_sum += 8
-            first = last
-            copy_of_the_first = copy_of_the_first[first:]
+        runs = int(math.log(self.length, 8))
+        for i in range(1, runs+1):
+            initial_sum = self.fitness_helper(initial_sum, i)
         return float(initial_sum)
 
+    def fitness_helper(self, initial_sum, num):
+        copy_of_the_first = copy.copy(self.string)
+        byte = 8^num
+        num_bit_strings = self.length // byte
+        for i in range(num_bit_strings):
+            first = 0
+            last = first + byte
+            string = "1" * byte
+            if copy_of_the_first[first:last] == string:
+                initial_sum += byte
+            first = last
+            copy_of_the_first = copy_of_the_first[first:]
+        return initial_sum
+
     def mutate(self, rate = 0.5):
-        child_genome = BitGenome(self.length, self.rand)
+        child_genome = BitGenome_GA_RR(self.length, self.rand)
         child = copy.copy(self.get_genome())
         child_list = list(child)
         num, den = utilities.convert_rate_to_fraction(rate)
@@ -101,8 +109,8 @@ class BitGenome_GA_RR(BitGenome):
         return child_genome
 
     def crossover(self, other):
-        child_genome1 = BitGenome(self.length, self.rand)
-        child_genome2 = BitGenome(self.length, self.rand)
+        child_genome1 = BitGenome_GA_RR(self.length, self.rand)
+        child_genome2 = BitGenome_GA_RR(self.length, self.rand)
         crossover_point = self.rand.randint(1, self.length)
         child1 = self.get_genome()[0:crossover_point] + \
                 other.get_genome()[crossover_point:self.length]
@@ -111,6 +119,18 @@ class BitGenome_GA_RR(BitGenome):
         child_genome1.initialize(child1)
         child_genome2.initialize(child2)
         return (child_genome1, child_genome2)
+
+    def get_genome(self):
+        return self.string
+
+    def initialize(self, my_string):
+        self.string = my_string
+
+    def initialize_r(self):
+        my_string = ""
+        for i in range(self.length):
+            my_string = my_string + self.rand.choice(["0", "1"])
+        self.string = my_string
 
 
 class Population():
@@ -301,6 +321,7 @@ class Pop_Bit_Genome_HC(Population):
         to_return += str(self.gen)
         to_return += "\n_______________________________________________________________________________________________\n"
         return to_return
+
     def generate_next_gen(self, mutation_rate):
         x = self.find_best()
         next_gen = []
@@ -308,6 +329,7 @@ class Pop_Bit_Genome_HC(Population):
             next_gen.append(x.mutate(mutation_rate))
         population = Pop_Bit_Genome_HC(self.pop_size, self.bitlen, self.rand, next_gen, self.gen + 1)
         return population
+
     def generate_first_pop(self):
         popul = []
         for i in range(self.pop_size):
@@ -323,27 +345,35 @@ class Pop_Bit_Genome_HC(Population):
                 best = self.pop[i]
         return best
 
-def hill_climber(pop_size, bit_len, mutation_rate, seed):
+def hill_climber(pop_size, bit_len, mutation_rate, seed, run):
     r = random.Random(seed)
     # file = file.open("HillClimber" + run, "w+")
     # file.writeline("RandomSeed," + str(seed))
-    # file.writeline("individual,fitness, ")
+    # file.writeline(str(pop_size) + "," + bit_len + "," + crossover_rate + "," + mutation_rate)
+    # file.writeline("gen,BestFitness")
     start_pop = Pop_Bit_Genome_HC(pop_size, bit_len, r)
     start_pop.generate_first_pop()
-    while int(start_pop.find_best().fitness()) != bit_len:
+    best = start_pop.find_best()
+    while int(best.fitness()) != bit_len:
         next = start_pop.generate_next_gen(mutation_rate)
         start_pop = next
-    print(start_pop.gen)
+        best = start_pop.find_best()
+        print(start_pop.gen)
+        print(start_pop.find_best().fitness())
+        #file.writeline(str(start_pop.gen) + "," + str(best.fitness()))
+    # print(start_pop.gen)
+    #file.close()
 
 def GA_RR(pop_size, bit_len, crossover_rate, mutation_rate, seed):
     r = random.Random(seed)
     start_pop = Pop_Bit_Genome_GA_RR(pop_size, bit_len, r)
     start_pop.generate_first_pop()
-    opt_string = "1"*bit_len
+    opt_string = "1" * bit_len
     while str(start_pop.find_best()) != opt_string:
         next = start_pop.generate_next_gen(crossover_rate, mutation_rate)
         start_pop = next
-    print(start_pop.gen)
+        print(start_pop.gen)
+        print(start_pop.find_best().fitness())
 
 def GA(pop_size, bit_len, crossover_rate, mutation_rate, seed):
     r = random.Random()
@@ -353,13 +383,15 @@ def GA(pop_size, bit_len, crossover_rate, mutation_rate, seed):
     while str(start_pop.find_best()) != opt_string:
         next = start_pop.generate_next_gen(crossover_rate, mutation_rate)
         start_pop = next
+        print(start_pop.gen)
+        print(start_pop.find_best().fitness())
     print(start_pop.gen)
 
 
 if __name__ == "__main__":
-    #hill_climber(64, 16, 0.7, 5)
-    GA_RR(64, 16, 0.7, 0.005, 5)
-    GA(64, 16, 0.7, 0.005, 5)
+    hill_climber(128, 64, 0.7, 3, 1)
+    #GA_RR(128, 64, 0.7, 0.005, 4)
+    GA(64, 16, 0.7, 0.005, 3)
 
 
 
