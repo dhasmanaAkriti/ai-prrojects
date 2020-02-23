@@ -77,14 +77,14 @@ class BitGenome_GA_RR(BitGenome):
         super().__init__(length, r)
     def fitness(self):
         initial_sum = 1
-        runs = int(math.log(self.length, 8))
-        for i in range(1, runs+1):
+        runs = int(math.log(self.length, 2))
+        for i in range(3, runs+1):
             initial_sum = self.fitness_helper(initial_sum, i)
         return float(initial_sum)
 
     def fitness_helper(self, initial_sum, num):
         copy_of_the_first = copy.copy(self.string)
-        byte = 8^num
+        byte = 2^num
         num_bit_strings = self.length // byte
         for i in range(num_bit_strings):
             first = 0
@@ -376,10 +376,11 @@ def GA_RR(pop_size, bit_len, crossover_rate, mutation_rate, seed):
         print(start_pop.find_best().fitness())
 
 def GA(pop_size, bit_len, crossover_rate, mutation_rate, seed):
-    r = random.Random()
+    r = random.Random(seed)
     start_pop = Pop_Bit_Genome_GA(pop_size, bit_len, r)
     start_pop.generate_first_pop()
     opt_string = "1" * bit_len
+    print(opt_string)
     while str(start_pop.find_best()) != opt_string:
         next = start_pop.generate_next_gen(crossover_rate, mutation_rate)
         start_pop = next
@@ -389,9 +390,11 @@ def GA(pop_size, bit_len, crossover_rate, mutation_rate, seed):
 
 
 if __name__ == "__main__":
-    hill_climber(128, 64, 0.7, 3, 1)
+    #hill_climber(128, 64, 0.005, 4, 1)
     #GA_RR(128, 64, 0.7, 0.005, 4)
-    GA(64, 16, 0.7, 0.005, 3)
+    GA(128, 64, 0.7, 0.005, 3)
+
+
 
 
 
