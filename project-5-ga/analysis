@@ -1,0 +1,4 @@
+import mathplotlib as plt
+import pandas as pd
+
+df = pd.read_csv("HillClimber1", delimiter = ",", rows = 23, skiprows = [1, 2, 3])
