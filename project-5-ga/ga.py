@@ -72,9 +72,11 @@ class BitGenome(Genome):
             my_string = my_string + self.rand.choice(["0", "1"])
         self.string = my_string
 
-class BitGenome_GA_RR(BitGenome):
-    def initialize(self, length, r):
-        super().__init__(length, r)
+class BitGenome_GA_RR():
+    def __init__(self, length, r):
+        self.length = length
+        self.string = ""
+        self.rand = r
     def fitness(self):
         initial_sum = 1
         runs = int(math.log(self.length, 2))
@@ -83,17 +85,15 @@ class BitGenome_GA_RR(BitGenome):
         return float(initial_sum)
 
     def fitness_helper(self, initial_sum, num):
-        copy_of_the_first = copy.copy(self.string)
-        byte = 2^num
+        byte = 2**num
         num_bit_strings = self.length // byte
+        first = 0
         for i in range(num_bit_strings):
-            first = 0
             last = first + byte
             string = "1" * byte
-            if copy_of_the_first[first:last] == string:
+            if self.string[first:last] == string:
                 initial_sum += byte
             first = last
-            copy_of_the_first = copy_of_the_first[first:]
         return initial_sum
 
     def mutate(self, rate = 0.5):
@@ -121,6 +121,9 @@ class BitGenome_GA_RR(BitGenome):
         return (child_genome1, child_genome2)
 
     def get_genome(self):
+        return self.string
+
+    def __str__(self):
         return self.string
 
     def initialize(self, my_string):
@@ -323,10 +326,10 @@ class Pop_Bit_Genome_HC(Population):
         return to_return
 
     def generate_next_gen(self, mutation_rate):
-        x = self.find_best()
+        x = self.cull(self.pop_size//2)
         next_gen = []
-        for i in range(self.pop_size):
-            next_gen.append(x.mutate(mutation_rate))
+        for i in x:
+            next_gen.append(i.mutate(mutation_rate))
         population = Pop_Bit_Genome_HC(self.pop_size, self.bitlen, self.rand, next_gen, self.gen + 1)
         return population
 
@@ -338,6 +341,33 @@ class Pop_Bit_Genome_HC(Population):
             popul.append(gen)
         self.pop = popul
 
+    def cull(self, size):
+        sum_fit = 0
+        for i in self.pop:
+            sum_fit += i.fitness()
+        new_l = []
+        for i in self.pop:
+            f = i.fitness()
+            new_l.append([i, f/sum_fit])
+        new_l.sort(key = lambda x: x[1])
+
+        for i in range(len(new_l)):
+            accum_sum = new_l[i][1]
+            for j in range(i):
+                accum_sum += new_l[j][1]
+            new_l[i].append(accum_sum)
+        culled_list = []
+        for i in range(size):
+            R = self.rand.random()
+            not_found = True
+            j = 0
+            while not_found:
+                if new_l[j][2] >= R:
+                    not_found = False
+                    culled_list.append(new_l[j][0])
+                j += 1
+        return culled_list
+
     def find_best(self):
         best = self.pop[0]
         for i in range(len(self.pop)):
@@ -347,52 +377,73 @@ class Pop_Bit_Genome_HC(Population):
 
 def hill_climber(pop_size, bit_len, mutation_rate, seed, run):
     r = random.Random(seed)
-    # file = file.open("HillClimber" + run, "w+")
-    # file.writeline("RandomSeed," + str(seed))
-    # file.writeline(str(pop_size) + "," + bit_len + "," + crossover_rate + "," + mutation_rate)
-    # file.writeline("gen,BestFitness")
     start_pop = Pop_Bit_Genome_HC(pop_size, bit_len, r)
+    file = open("HillClimber" + str(run), "w+")
+    file.write("RandomSeed," + str(seed) + "," + "Population size:" + str(pop_size) + "," +"Bit Length:" + str(bit_len) + "," + "Crossover Rate:"+ "0" + ","
+                     +"Mutation Rate:" + str(mutation_rate) + "\n")
+    file.write("gen,BestFitness,FitnessEval" + "\n")
     start_pop.generate_first_pop()
     best = start_pop.find_best()
-    while int(best.fitness()) != bit_len:
+    opt_string = "1"* bit_len
+    while str(best) != opt_string and  start_pop.gen < 2000:
         next = start_pop.generate_next_gen(mutation_rate)
         start_pop = next
         best = start_pop.find_best()
-        print(start_pop.gen)
-        print(start_pop.find_best().fitness())
-        #file.writeline(str(start_pop.gen) + "," + str(best.fitness()))
-    # print(start_pop.gen)
-    #file.close()
+        file.write(str(start_pop.gen) + "," + str(int(best.fitness())) + "," + str(int(best.fitness()) * pop_size) + "\n")
+    file.close()
 
-def GA_RR(pop_size, bit_len, crossover_rate, mutation_rate, seed):
+def GA_RR(pop_size, bit_len, crossover_rate, mutation_rate, seed, run):
     r = random.Random(seed)
     start_pop = Pop_Bit_Genome_GA_RR(pop_size, bit_len, r)
     start_pop.generate_first_pop()
+    file = open("GARRIntermediate" + str(run), "w+")
+    file.write("RandomSeed," + str(seed) + "," + "Population size:" + str(pop_size) + "," + "Bit Length:" + str(
+        bit_len) + "," + "Crossover Rate:" + str(crossover_rate) + ","
+               + "Mutation Rate:" + str(mutation_rate) + "\n")
+    file.write("gen,BestFitness,FitnessEval" + "\n")
+    best = start_pop.find_best()
     opt_string = "1" * bit_len
-    while str(start_pop.find_best()) != opt_string:
+    while str(best) != opt_string and start_pop.gen < 2000:
         next = start_pop.generate_next_gen(crossover_rate, mutation_rate)
         start_pop = next
-        print(start_pop.gen)
-        print(start_pop.find_best().fitness())
+        best = start_pop.find_best()
+        file.write(str(start_pop.gen) + "," + str(best.fitness()) + "," + str(
+            int(best.fitness() * pop_size)) + "\n")
+    file.close()
 
-def GA(pop_size, bit_len, crossover_rate, mutation_rate, seed):
+
+def GA(pop_size, bit_len, crossover_rate, mutation_rate, seed, run):
     r = random.Random(seed)
     start_pop = Pop_Bit_Genome_GA(pop_size, bit_len, r)
     start_pop.generate_first_pop()
+    best = start_pop.find_best()
+    file = open("GARR" + str(run), "w+")
+    file.write("RandomSeed," + str(seed) + "," + "Population size:" + str(pop_size) + "," + "Bit Length:" + str(
+        bit_len) + "," + "Crossover Rate:" + str(crossover_rate) + ","
+               + "Mutation Rate:" + str(mutation_rate) + "\n")
+    file.write("gen,BestFitness,FitnessEval" + "\n")
     opt_string = "1" * bit_len
-    print(opt_string)
-    while str(start_pop.find_best()) != opt_string:
+    while start_pop.gen < 2000 and str(best) != opt_string:
         next = start_pop.generate_next_gen(crossover_rate, mutation_rate)
         start_pop = next
-        print(start_pop.gen)
-        print(start_pop.find_best().fitness())
-    print(start_pop.gen)
-
+        best = start_pop.find_best()
+        file.write(str(start_pop.gen) + "," + str(int(best.fitness())) + "," + str(
+           int(best.fitness() * pop_size)) + "\n")
+    file.close()
 
 if __name__ == "__main__":
-    #hill_climber(128, 64, 0.005, 4, 1)
-    #GA_RR(128, 64, 0.7, 0.005, 4)
-    GA(128, 64, 0.7, 0.005, 3)
+    for i in range(1, 31):
+        seed = random.randint(0, 100000)
+        hill_climber(128, 64, 0.005, seed, i)
+    for i in range(1, 31):
+        seed = random.randint(0, 100000)
+        GA_RR(128, 64, 0.7, 0.005, seed, i)
+    # for i in range(1, 31):
+    #     seed = random.randint(0, 100000)
+    #     GA(128, 64, 0.7, 0.005, seed, i)
+
+
+
 
 
 

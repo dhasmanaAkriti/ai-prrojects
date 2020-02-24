@@ -1,3 +1,4 @@
+import math, copy
 def convert_rate_to_fraction(rate):
     rate_string = str(rate)
     denominator = "1"
@@ -12,3 +13,4 @@ def flip(x):
         return "1"
     else:
         return "0"
+
