@@ -23,3 +23,11 @@ of the size n^2 - 1. The steps and intermediate stages are printed out when the 
 Project 4: This code uses minimax adversial search algorithm with alpha beta pruning and a static evaluator to play 
 the Hawaiin Checkers game of Konane. It uses thet static evaluator to return the value for every stage of the board.
 This search algorithm was built using Python 3.8.1  
+
+Project 5: This project implements the Royal Roads paper by Melanie Mitchell. Three experiments were conducted as a part of this project. 
+First, the Random Hill Climber was used to evolve a randomly generated population of 126 bitstrings each of size 64. Then, the fitness function
+was changed to the one described in the Royal Roads paper. The experiment was run to evolve the bitstring to generate intermediate parts 
+that will help generate the optimal bitstring. The same was done to implement mutations and crossover to generate subsequent generations 
+without any rewards for achieving intermediate steps. The results were consolidated in the form of graphs and were analyzed in the 
+Jupyter Notebook in the project folder.  
+ 
