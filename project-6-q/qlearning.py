@@ -44,8 +44,8 @@ while(True):
     #you'll need to install getch in order to get this part to work
     # or comment out and replace with the line below it.
     # pip3 install --user getch
-    action = int(getch.getch())%4
-    #action = int(input('0: LEFT, 1: DOWN, 2: RIGHT, 3:UP'))
+    #action = int(getch.getch())%4
+    action = int(input('0: LEFT, 1: DOWN, 2: RIGHT, 3:UP'))
     new_state,reward,done, info = env.step(action)
     #the q learning magic happens here.
     q_table[state,action] = q_table[state, action] * (1 - learning_rate) + \
