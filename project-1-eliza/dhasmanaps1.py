@@ -97,7 +97,7 @@ class AkritiChatAgent: #replace this with your last name, like RieffelChatAgent
    def gamesRiddles(self, instring):
        response = input("Are you bored?" + "\n")
        if response in self.Affirmations:
-           gamesRiddles = [self.AskARiddle, self.tellAJoke, self.playTicTacToe, self.playImitationGame]
+           gamesRiddles = [self.playImitationGame(), self.tellAJoke(), self.AskARiddle(), self.playTicTacToe]
            randGame = random.choice(gamesRiddles)
            reply = randGame(instring)
        else:

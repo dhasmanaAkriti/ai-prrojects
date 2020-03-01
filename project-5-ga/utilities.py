@@ -14,3 +14,6 @@ def flip(x):
     else:
         return "0"
 
+if __name__ == "__main__":
+    print(convert_rate_to_fraction(0.00005))
+

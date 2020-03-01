@@ -254,7 +254,7 @@ class Pop_Bit_Genome_GA_RR(Population):
 
     def generate_next_gen(self, crossover_rate, mutation_rate):
         x = self.cull(self.pop_size//2)
-        next_gen = []
+        next_gen = copy.copy(x)
         num, dem = utilities.convert_rate_to_fraction(crossover_rate)
         while len(next_gen) != self.pop_size:
             loc = self.rand.randint(1, dem)
@@ -438,9 +438,9 @@ if __name__ == "__main__":
     for i in range(1, 31):
         seed = random.randint(0, 100000)
         GA_RR(128, 64, 0.7, 0.005, seed, i)
-    # for i in range(1, 31):
-    #     seed = random.randint(0, 100000)
-    #     GA(128, 64, 0.7, 0.005, seed, i)
+    for i in range(1, 31):
+        seed = random.randint(0, 100000)
+        GA(128, 64, 0.7, 0.005, seed, i)
 
 
 
