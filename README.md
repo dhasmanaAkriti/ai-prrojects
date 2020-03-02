@@ -30,4 +30,10 @@ was changed to the one described in the Royal Roads paper. The experiment was ru
 that will help generate the optimal bitstring. The same was done to implement mutations and crossover to generate subsequent generations 
 without any rewards for achieving intermediate steps. The results were consolidated in the form of graphs and were analyzed in the 
 Jupyter Notebook in the project folder.  
+
+Project 6: For this project, we implemented q-learning in different OpenAIGym environments. First, the q-learner explored the CoffeeGame environment 
+followed by the Frozen lake environment and then the taxi environment. The average rewards per 1000 runs were graphed for each environment 
+and saved in an HTML file. In the second part of the experiment, a decay rate was added for the exploration rate in each environment.
+Average rewards per 1000 runs were graphed again. It was observed that the larger the size of the environment, the smaller was the decay rate
+to ensure maximum exploration. The results were saved in a different HTML file. 
  
