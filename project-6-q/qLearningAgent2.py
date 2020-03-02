@@ -1,3 +1,10 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Mar  1 14:24:26 2020
+
+@author: Akriti
+"""
+
 import random
 import numpy as np
 import coffeegame
@@ -17,8 +24,11 @@ def printQTable(qt):
 
 
 class QLearningAgent():
-    INTERVAL = 100
-    def __init__(self, max_steps, max_num_eps, environment, learning_rate = 0.1, discount_rate = 0.6, exploration_rate = 0.5, render = False):
+    """
+    This Q-Learning agent has 
+    """
+    INTERVAL = 1000
+    def __init__(self, max_steps, max_num_eps, environment, learning_rate = 0.1, discount_rate = 0.6, exploration_rate = 1, render = False, decay_rate = 0.01):
         self.lr = learning_rate
         self.dr = discount_rate
         self.er = exploration_rate
@@ -28,6 +38,7 @@ class QLearningAgent():
         self.q_table = np.zeros((self.env.observation_space.n, self.env.action_space.n))
         self.render = render
         self.rewards = []
+        self.decay_rate = decay_rate
     def learn(self):
         runs = 0
         while runs < self.num_eps:
@@ -48,7 +59,7 @@ class QLearningAgent():
                                  self.lr * (reward + self.dr * np.max(self.q_table[new_state, :]))
                 if self.render == True:
                     self.env.render()
-                    printQTable(self.q_table)
+#                    printQTable(self.q_table)
                 reward_in_ep += reward
                 
                 if (done):
@@ -60,7 +71,8 @@ class QLearningAgent():
                 steps += 1
             self.rewards.append(reward_in_ep)
             runs += 1
-        print("training time finished")
+            self.er = (1-self.decay_rate)*self.er
+            
     def behave(self):
         state = self.env.reset()
         done = False
@@ -82,21 +94,13 @@ class QLearningAgent():
                 y.append(total/i)
         return (x, y)
         
-            
-
 if __name__ == "__main__":
     env = coffeegame.CoffeeEnv()
     env2 = gym.make("FrozenLake-v0", is_slippery=False)
     env3 = gym.make("Taxi-v3")
-    
-    LearningAgent = QLearningAgent(20, 20000, env, render=False)
-    LearningAgent2 = QLearningAgent(20, 20000, env2)
-    LearningAgent3 = QLearningAgent(750, 20000, env3)
-    
-    LearningAgent = QLearningAgent(20, 20000, env, render=False)
-    LearningAgent2 = QLearningAgent(20, 20000, env2)
-    LearningAgent3 = QLearningAgent(750, 20000, env3)
-    
+    LearningAgent = QLearningAgent(20, 20000, env, decay_rate = 0.01 )
+    LearningAgent2 = QLearningAgent(30, 20000, env2, decay_rate = 0.001)
+    LearningAgent3 = QLearningAgent(750, 20000, env3, decay_rate = 0.001)
     
     # LEARNING STUFF
     LearningAgent.learn()
@@ -108,12 +112,12 @@ if __name__ == "__main__":
     LearningAgent2.behave()
     LearningAgent3.behave()
     
-    #PLOTTING GRAPHS
+      #PLOTTING GRAPHS
     plt.xlabel("Number of Episodes")
     plt.ylabel("Average Reward per 1000 episodes")
     plt.plot(LearningAgent.plot()[0], LearningAgent.plot()[1])
     plt.show()
-   
+    
     plt.xlabel("Number of Episodes")
     plt.ylabel("Average Reward per 1000 episodes")
     plt.plot(LearningAgent2.plot()[0], LearningAgent2.plot()[1])
@@ -125,6 +129,8 @@ if __name__ == "__main__":
     plt.show()
     
     
+            
+
 
 
 
