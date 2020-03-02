@@ -98,8 +98,8 @@ if __name__ == "__main__":
     env = coffeegame.CoffeeEnv()
     env2 = gym.make("FrozenLake-v0", is_slippery=False)
     env3 = gym.make("Taxi-v3")
-    LearningAgent = QLearningAgent(20, 20000, env, decay_rate = 0.01 )
-    LearningAgent2 = QLearningAgent(30, 20000, env2, decay_rate = 0.001)
+    LearningAgent = QLearningAgent(20, 20000, env, decay_rate = 0.025 )
+    LearningAgent2 = QLearningAgent(30, 20000, env2, decay_rate = 0.003)
     LearningAgent3 = QLearningAgent(750, 20000, env3, decay_rate = 0.001)
     
     # LEARNING STUFF

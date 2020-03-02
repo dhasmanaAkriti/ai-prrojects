@@ -89,9 +89,6 @@ if __name__ == "__main__":
     env2 = gym.make("FrozenLake-v0", is_slippery=False)
     env3 = gym.make("Taxi-v3")
     
-    LearningAgent = QLearningAgent(20, 20000, env, render=False)
-    LearningAgent2 = QLearningAgent(20, 20000, env2)
-    LearningAgent3 = QLearningAgent(750, 20000, env3)
     
     LearningAgent = QLearningAgent(20, 20000, env, render=False)
     LearningAgent2 = QLearningAgent(20, 20000, env2)
