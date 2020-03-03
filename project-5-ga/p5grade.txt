@@ -1,0 +1,7 @@
+50/50 Code:
+20/25 Results+Analysis:
+5/25 Writeup:
+
+Total:  75
+
+Notes: you made an effort at a writeup, and seem to have run a full suite of tests, but your writeup was inadequate and I couldn't figure out what you had accomplished, or where any bugs might be. (judging from your writeup there's definitely a bug)
