@@ -1,0 +1,8 @@
+20/20 Q learning
+20/20 Decay
+30/30 New Environment
+15/30 Analysis/Results
+
+Total: 85
+
+Notes: your html files were hard to read.  Your graphs didn't have enough labels for me to really understand what you were plotting.  I need a bit more thorough analysis
