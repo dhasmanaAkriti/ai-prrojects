@@ -30,8 +30,7 @@ class Unit:
 
     def sigmoidFunction(self, x):
         return 1 / (1 + math.exp(-x))
-    def setActivation(self, x):
-        self.activation = x
+
 
 #------------------------------------------------------------------------------
 
@@ -115,9 +114,9 @@ class Network:
         It ensures that given pattern is the appropriate length and
         that the values are in the range 0-1. 
         """
-        if len(pattern) == len(self.inputLayer) and max(pattern)<1 and min(pattern)>0:
-            for unit_ind in len(pattern):
-                self.inputLayer[unit_ind].setActivation(pattern[unit_ind])
+        if len(pattern) == len(self.inputLayer):
+            for unit_ind in range(len(pattern)):
+                (self.inputLayer[unit_ind]).activation = pattern[unit_ind]
         for unit in self.hiddenLayer:
             sum_act = 0
             for connection in unit.incomingConnections:
@@ -159,7 +158,7 @@ class Network:
                     num_correct += 1
                 err += (desired_output[i] - actual_output[i])**2
         score = (num_correct*100)/total
-        print(num_correct, total, score, err)
+        # print(num_correct, total, score, err)
         return (num_correct, total, score, err)
 
 
@@ -179,11 +178,11 @@ class Network:
 
         actual_output = self.propagate(pattern)
         desired_output = target
-        for i in range(len(self.outputLayer)):
+        for i in range(0, len(self.outputLayer)):
             err = desired_output[i] - actual_output[i]
             self.outputLayer[i].delta = err*self.sigmoidprime(self.outputLayer[i].activation)
 
-        for i in range(len(self.hiddenLayer)):
+        for i in range(0, len(self.hiddenLayer)):
             term = 0
             for j in self.hiddenLayer[i].outgoingConnections:
                 term += j.weight * j.toUnit.delta
@@ -191,6 +190,8 @@ class Network:
         for connection in self.allConnections:
             connection.increment = self.learningRate * connection.fromUnit.activation * connection.toUnit.delta
             connection.weight += connection.increment
+        # for connection in self.allConnections:
+        #     print(connection.increment)
 
     def sigmoidprime(self, term):
         return term *(1-term)
